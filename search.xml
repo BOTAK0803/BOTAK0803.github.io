@@ -15,6 +15,8 @@
           
           <category> Skills </category>
           
+          <category> Mac </category>
+          
       </categories>
       
       
@@ -40,6 +42,8 @@
           
           <category> PaperReading </category>
           
+          <category> Graph-Based-RS </category>
+          
       </categories>
       
       
@@ -64,6 +68,10 @@
       <categories>
           
           <category> PaperReading </category>
+          
+          <category> Graph-Based-RS </category>
+          
+          <category> SSL </category>
           
       </categories>
       
@@ -92,6 +100,8 @@
           
           <category> PaperReading </category>
           
+          <category> Graph-Based-RS </category>
+          
       </categories>
       
       
@@ -116,6 +126,10 @@
       <categories>
           
           <category> PaperReading </category>
+          
+          <category> Graph-Based-RS </category>
+          
+          <category> SSL </category>
           
       </categories>
       
@@ -144,6 +158,8 @@
           
           <category> PaperReading </category>
           
+          <category> Graph-Based-RS </category>
+          
       </categories>
       
       
@@ -168,6 +184,8 @@
       <categories>
           
           <category> PaperReading </category>
+          
+          <category> Multi-task Learning </category>
           
       </categories>
       
@@ -194,6 +212,8 @@
           
           <category> PaperReading </category>
           
+          <category> Graph-Based-RS </category>
+          
       </categories>
       
       
@@ -218,6 +238,8 @@
       <categories>
           
           <category> PaperReading </category>
+          
+          <category> Multi-task Learning </category>
           
       </categories>
       
@@ -244,6 +266,8 @@
           
           <category> PaperReading </category>
           
+          <category> Multi-task Learning </category>
+          
       </categories>
       
       
@@ -269,6 +293,8 @@
           
           <category> PaperReading </category>
           
+          <category> Multi-task Learning </category>
+          
       </categories>
       
       
@@ -293,6 +319,8 @@
       <categories>
           
           <category> PaperReading </category>
+          
+          <category> CTR prediction </category>
           
       </categories>
       
