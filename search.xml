@@ -199,6 +199,8 @@
           
           <category> Recall </category>
           
+          <category> I2I </category>
+          
           <category> Embedding I2I </category>
           
       </categories>
@@ -262,6 +264,8 @@
           <category> Recall </category>
           
           <category> I2I </category>
+          
+          <category> Tradition I2I </category>
           
       </categories>
       
