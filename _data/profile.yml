@@ -31,11 +31,11 @@ portrait_url: /assets/images/photos/cat.jpg
 #   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-- name: University of Chinese Academy of Sciences, Institute of Computing Technology, Chinese Academy of Sciences
+- name: Institute of Computing Technology (ICT), University of Chinese Academy of Sciences (UCAS)
   logo: /assets/images/badges/ucas.png
   position: M.S. in Computer Science
   date: Sep. 2019 - Jul. 2022
-- name: Shandong University
+- name: Shandong University (SDU)
   logo: /assets/images/badges/sdu.png
   position: B.S. in Computer Science
   date: Sep. 2015 - Jul. 2019
