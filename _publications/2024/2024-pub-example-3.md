@@ -19,5 +19,5 @@ authors:
   - Dong Li
   - Zhuoran Zhuang
 links:
-  pdf: [https://github.com/luost26/academic-homepage](https://dl.acm.org/doi/epdf/10.1145/3711896.3737183)
+  pdf: https://dl.acm.org/doi/epdf/10.1145/3711896.3737183
 ---
