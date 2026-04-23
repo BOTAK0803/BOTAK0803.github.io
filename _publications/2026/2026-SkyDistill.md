@@ -3,6 +3,7 @@ title:          "SkyDistill: Navigating Fuzzy Flight Search Ranking via Precise 
 date:           2026-04-01 00:01:00 +0800
 selected:       true
 pub:            "Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
+pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Poster</span>'
 pub_date:       "2026"
 # semantic_scholar_id: 11ac0b5634a282f1a0da204b98e7473d8b480dfb  # use this to retrieve citation count
 # abstract: >-
