@@ -3,7 +3,7 @@ secondary_name: ""
 navbar_name: "Maolei Huang"
 
 positions:
-- name: Title or Position
+- name: Senior Algorithm Engineer
 - name: Alibaba
   logo: /assets/images/badges/cat.png  # Logo is optional
 
@@ -30,7 +30,7 @@ short_bio: >-
     as well as being common in domestic longhair and domestic shorthair cats.
   </p>
 
-portrait_url: /assets/images/badges/cat.png
+portrait_url: /assets/images/photos/portrait.jpg
 # portrait_caption: >-
 #   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
@@ -38,16 +38,21 @@ education:
 - name: Institute of Computing Technology, University of of Sciences
   logo: /assets/images/badges/ucas.png
   position: M.S. in Computer Science
-  date: Sep. 2024 - present
+  date: Sep. 2029 - Jul. 2022
 - name: Shandong University
   logo: /assets/images/badges/sdu.png
   position: B.S. in Computer Science
   date: Sep. 2015 - Jul. 2019
 
-awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
+experience:
+- name: Senior Algorithm Engineer
+  logo: /assets/images/badges/alibaba.png
+  position: Senior Algorithm Engineer
+  date: Sep. 2021 - present
+# awards:
+# - name: Award Name 2
+#   date: 2024
+# - name: Award Name 1 
+#   date: 2021
+# - name: A quick brown fox jumps over the lazy dog and runs away award
+#   date: 2021
