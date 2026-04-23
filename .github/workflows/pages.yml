@@ -1,25 +1,33 @@
-name: Build and deploy Jekyll site to GitHub Pages
+name: Build and deploy Jekyll site
+
 on:
   push:
     branches:
       - main
+
 jobs:
-  github-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-ruby@v1
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.0' # 指定 ruby 版本
-      - run: |
-          gem install jekyll bundler
-          bundle install
-          bundle exec jekyll build
-      - uses: actions/upload-pages-artifact@v3
+          ruby-version: '3.1' # 使用较新的稳定版
+          bundler-cache: true # 自动运行 bundle install 并缓存
+
+      - name: Build site
+        run: bundle exec jekyll build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site/
+          path: "./_site"
+
   deploy:
-    needs: github-pages
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       pages: write
@@ -28,5 +36,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy
+        id: deployment
         uses: actions/deploy-pages@v4
