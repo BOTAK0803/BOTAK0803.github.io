@@ -12,7 +12,7 @@ pub_date:       "2025"
 #   With the flourishing development of aviation and the convenience of booking flights online, nearby flight recommendation has become the core business of Online Travel Platforms (OTPs). Nearby flight addresses the issue of inadequate flight options for travelers by offering more cost-effective alternatives, such as recommending flights from nearby cities or on nearby departure dates. 
 cover:          /assets/images/covers/CPNet.png
 authors:
-  - Maolei Huang *
+  - Maolei Huang
   - Detao Lv
   - Yao Yu
   - Shuhan Song
