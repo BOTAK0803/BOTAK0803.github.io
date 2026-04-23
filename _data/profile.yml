@@ -31,7 +31,7 @@ portrait_url: /assets/images/photos/cat.jpg
 #   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
-- name: Institute of Computing Technology, University of of Sciences
+- name: University of Chinese Academy of Sciences, Institute of Computing Technology, Chinese Academy of Sciences
   logo: /assets/images/badges/ucas.png
   position: M.S. in Computer Science
   date: Sep. 2019 - Jul. 2022
