@@ -1,6 +1,6 @@
 ---
 title:          "CPNet: A Context based Personalized Deep Network for Nearby Flight Recommendation"
-date:           2026-08-03 00:01:00 +0800 
+date:           2025-08-03 00:01:00 +0800 
 selected:       true
 pub:            "KDD'25: Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2"
 # pub_pre:        "Submitted to "

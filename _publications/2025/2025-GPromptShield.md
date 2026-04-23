@@ -1,6 +1,6 @@
 ---
 title:          "GPromptShield: Elevating Resilience in Graph Prompt Tuning Against Adversarial Attacks"
-date:           2026-02-06 00:01:00 +0800 
+date:           2025-02-06 00:01:00 +0800 
 selected:       true
 pub:            "ICLR'25: The Thirteenth International Conference on Learning Representations"
 # pub_pre:        "Submitted to "
