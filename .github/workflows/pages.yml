@@ -1,0 +1,32 @@
+name: Build and deploy Jekyll site to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  github-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '3.0' # 指定 ruby 版本
+      - run: |
+          gem install jekyll bundler
+          bundle install
+          bundle exec jekyll build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site/
+  deploy:
+    needs: github-pages
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
