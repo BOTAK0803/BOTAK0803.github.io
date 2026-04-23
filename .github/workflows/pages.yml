@@ -15,7 +15,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # 使用较新的稳定版
+          ruby-version: '3.3' # 使用较新的稳定版
           bundler-cache: true # 自动运行 bundle install 并缓存
 
       - name: Build site
