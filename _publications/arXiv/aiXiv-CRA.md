@@ -1,21 +1,17 @@
 ---
 title:          "CRA: A Tripartite Adaptation Framework for Robust Promotional Drift Mitigation in Industrial Recommendation"
-date:           arXiv
+# date:           arXiv
 selected:       true
 pub:            "aiXiv"
 pub_last:       ''
-pub_date:       "arXiv"
+# pub_date:       "arXiv"
 # abstract: >-
 #   Cover image is a photo by Thomas Renaud on Unsplash. The abstract of the publication is meant to be a TLDR (very brief summary with 1~2 sentences) of your paper.
 cover:          /assets/images/covers/CRC.png
 authors:
 - Maolei Huang
-- Zhuoran Zhuang
-- Detao Lv
-- Yuantong Li
 - Shuhan Song
 - Huawei Cao
-
 links:
   Paper: https://www.cell.com
   Code: https://www.cell.com
