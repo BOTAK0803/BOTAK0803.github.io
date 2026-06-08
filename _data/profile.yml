@@ -29,6 +29,14 @@ short_bio: >-
     I hold an <strong>M.S.</strong> in Computer Architecture from the Institute of Computing Technology (<strong>ICT</strong>), University of Chinese Academy of Sciences (<strong>UCAS</strong>), and a B.S. in Software Engineering from Shandong University (<strong>SDU</strong>). Beyond my core responsibilities, I am an active member of the global research community, serving as a regular Program Committee member and reviewer for premier AI and data mining conferences, including KDD, RecSys, and SIGIR. Throughout my career, I have remained committed to bridging the gap between cutting-edge algorithmic innovation and real-world industrial impact, consistently delivering measurable improvements in both user experience and business efficiency. I thrive on transforming theoretical research into scalable solutions that drive sustainable business growth and long-term competitive advantage
   </p>
 
+short_bio_zh: >-
+  <p>
+    我是<strong>阿里巴巴（北京）</strong>的研究员，专注于<strong>排序与推荐系统及供应链优化</strong>。我的工作聚焦于设计和部署鲁棒的大规模推荐引擎，为多样化、高并发的商业生态提供支撑。我对深度学习在用户意图建模、多任务学习、跨域迁移学习和大规模收入优化等复杂挑战中的前沿应用充满热情。
+  </p>
+  <p>
+    我获得了中国科学院大学计算技术研究所（<strong>ICT, UCAS</strong>）的计算机体系结构硕士学位，以及山东大学（<strong>SDU</strong>）的软件工程学士学位。在核心工作之外，我积极参与全球学术社区，担任 KDD、RecSys、SIGIR 等顶级 AI 和数据挖掘会议的程序委员会成员和审稿人。在我的职业生涯中，我始终致力于弥合前沿算法创新与现实工业应用之间的鸿沟，持续在用户体验和商业效率方面带来可衡量的提升。
+  </p>
+
 portrait_url: /assets/images/photos/cat.jpg
 # portrait_caption: >-
 #   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
