@@ -20,12 +20,27 @@
                     class="mr-1 mt-1"
                   />
                   <div class="media-body">
-                    <div>{{ item.name }}</div>
+                    <div>
+                      <span data-lang-en>{{ item.name }}</span
+                      ><span data-lang-zh style="display: none"
+                        >{{ item.name_zh | default: item.name }}</span
+                      >
+                    </div>
                     <div class="small">{{ item.dept }}</div>
                     <div class="small d-flex">
-                      <div>{{ item.position }}</div>
+                      <div>
+                        <span data-lang-en>{{ item.position }}</span
+                        ><span data-lang-zh style="display: none"
+                          >{{ item.position_zh | default: item.position }}</span
+                        >
+                      </div>
                       <div class="mt-auto ml-auto no-break">
-                        <em>{{ item.date }}</em>
+                        <em
+                          ><span data-lang-en>{{ item.date }}</span
+                          ><span data-lang-zh style="display: none"
+                            >{{ item.date_zh | default: item.date }}</span
+                          ></em
+                        >
                       </div>
                     </div>
                   </div>
@@ -51,12 +66,27 @@
                     class="mr-1 mt-1"
                   />
                   <div class="media-body">
-                    <div>{{ item.name }}</div>
+                    <div>
+                      <span data-lang-en>{{ item.name }}</span
+                      ><span data-lang-zh style="display: none"
+                        >{{ item.name_zh | default: item.name }}</span
+                      >
+                    </div>
                     <div class="small">{{ item.dept }}</div>
                     <div class="small d-flex">
-                      <div>{{ item.position }}</div>
+                      <div>
+                        <span data-lang-en>{{ item.position }}</span
+                        ><span data-lang-zh style="display: none"
+                          >{{ item.position_zh | default: item.position }}</span
+                        >
+                      </div>
                       <div class="mt-auto ml-auto no-break">
-                        <em>{{ item.date }}</em>
+                        <em
+                          ><span data-lang-en>{{ item.date }}</span
+                          ><span data-lang-zh style="display: none"
+                            >{{ item.date_zh | default: item.date }}</span
+                          ></em
+                        >
                       </div>
                     </div>
                   </div>

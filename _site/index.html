@@ -88,13 +88,15 @@
         </li>
         
       </ul>
-      <button
-        class="btn btn-outline-light btn-sm ml-2"
-        id="lang-toggle"
-        onclick="toggleLang()"
-      >
-        中文
-      </button>
+      <li class="nav-item" style="list-style: none">
+        <a
+          class="nav-link"
+          href="javascript:void(0)"
+          id="lang-toggle"
+          onclick="toggleLang()"
+          >中文</a
+        >
+      </li>
     </div>
   </div>
 </nav>
@@ -326,12 +328,27 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
                     class="mr-1 mt-1"
                   />
                   <div class="media-body">
-                    <div>Institute of Computing Technology, University of Chinese Academy of Sciences</div>
+                    <div>
+                      <span data-lang-en>Institute of Computing Technology, University of Chinese Academy of Sciences</span
+                      ><span data-lang-zh style="display: none"
+                        >中国科学院大学 计算技术研究所</span
+                      >
+                    </div>
                     <div class="small"></div>
                     <div class="small d-flex">
-                      <div>M.S. in Computer Science</div>
+                      <div>
+                        <span data-lang-en>M.S. in Computer Science</span
+                        ><span data-lang-zh style="display: none"
+                          >计算机科学与技术 硕士</span
+                        >
+                      </div>
                       <div class="mt-auto ml-auto no-break">
-                        <em>Sep. 2019 - Jul. 2022</em>
+                        <em
+                          ><span data-lang-en>Sep. 2019 - Jul. 2022</span
+                          ><span data-lang-zh style="display: none"
+                            >2019.09 - 2022.07</span
+                          ></em
+                        >
                       </div>
                     </div>
                   </div>
@@ -345,12 +362,27 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
                     class="mr-1 mt-1"
                   />
                   <div class="media-body">
-                    <div>Shandong University</div>
+                    <div>
+                      <span data-lang-en>Shandong University</span
+                      ><span data-lang-zh style="display: none"
+                        >山东大学</span
+                      >
+                    </div>
                     <div class="small"></div>
                     <div class="small d-flex">
-                      <div>B.S. in Software Engineering</div>
+                      <div>
+                        <span data-lang-en>B.S. in Software Engineering</span
+                        ><span data-lang-zh style="display: none"
+                          >软件工程 学士</span
+                        >
+                      </div>
                       <div class="mt-auto ml-auto no-break">
-                        <em>Sep. 2015 - Jul. 2019</em>
+                        <em
+                          ><span data-lang-en>Sep. 2015 - Jul. 2019</span
+                          ><span data-lang-zh style="display: none"
+                            >2015.09 - 2019.07</span
+                          ></em
+                        >
                       </div>
                     </div>
                   </div>
@@ -376,12 +408,27 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
                     class="mr-1 mt-1"
                   />
                   <div class="media-body">
-                    <div>Alibaba</div>
+                    <div>
+                      <span data-lang-en>Alibaba</span
+                      ><span data-lang-zh style="display: none"
+                        >阿里巴巴</span
+                      >
+                    </div>
                     <div class="small"></div>
                     <div class="small d-flex">
-                      <div>Senior Algorithm Engineer</div>
+                      <div>
+                        <span data-lang-en>Senior Algorithm Engineer</span
+                        ><span data-lang-zh style="display: none"
+                          >高级算法工程师</span
+                        >
+                      </div>
                       <div class="mt-auto ml-auto no-break">
-                        <em>Sep. 2022 - present</em>
+                        <em
+                          ><span data-lang-en>Sep. 2022 - present</span
+                          ><span data-lang-zh style="display: none"
+                            >2022.09 - 至今</span
+                          ></em
+                        >
                       </div>
                     </div>
                   </div>
@@ -395,12 +442,27 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
                     class="mr-1 mt-1"
                   />
                   <div class="media-body">
-                    <div>Fliggy, Alibaba</div>
+                    <div>
+                      <span data-lang-en>Fliggy, Alibaba</span
+                      ><span data-lang-zh style="display: none"
+                        >飞猪（阿里巴巴）</span
+                      >
+                    </div>
                     <div class="small"></div>
                     <div class="small d-flex">
-                      <div>Algorithm Engineer Intern</div>
+                      <div>
+                        <span data-lang-en>Algorithm Engineer Intern</span
+                        ><span data-lang-zh style="display: none"
+                          >算法工程师实习</span
+                        >
+                      </div>
                       <div class="mt-auto ml-auto no-break">
-                        <em>Jun. 2021 - Sep. 2022</em>
+                        <em
+                          ><span data-lang-en>Jun. 2021 - Sep. 2022</span
+                          ><span data-lang-zh style="display: none"
+                            >2021.06 - 2022.09</span
+                          ></em
+                        >
                       </div>
                     </div>
                   </div>
@@ -430,35 +492,60 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
       <div class="media-body">
         
         <div class="my-1 d-flex">
-          <div>[Alibaba] We are happy that our system "SkyDistill" has been officially certified for successful deployment and application by Alibaba! 🎈🎈🎈</div>
+          <div>
+            <span data-lang-en>[Alibaba] We are happy that our system "SkyDistill" has been officially certified for successful deployment and application by Alibaba! 🎈🎈🎈</span
+            ><span data-lang-zh style="display: none"
+              >[阿里巴巴] 我们的系统 "SkyDistill" 已正式通过阿里巴巴落地应用认证！🎈🎈🎈</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Jun 18</i>
           </div>
         </div>
         
         <div class="my-1 d-flex">
-          <div>[Alibaba] We are happy that our system "PCANet" has been officially certified for successful deployment and application by Alibaba! 🎈🎈🎈</div>
+          <div>
+            <span data-lang-en>[Alibaba] We are happy that our system "PCANet" has been officially certified for successful deployment and application by Alibaba! 🎈🎈🎈</span
+            ><span data-lang-zh style="display: none"
+              >[阿里巴巴] 我们的系统 "PCANet" 已正式通过阿里巴巴落地应用认证！🎈🎈🎈</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Jun 18</i>
           </div>
         </div>
         
         <div class="my-1 d-flex">
-          <div>[SIGIR'26]. We are happy that "SkyDistill" has been accepted by the Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval !</div>
+          <div>
+            <span data-lang-en>[SIGIR'26]. We are happy that "SkyDistill" has been accepted by the Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval !</span
+            ><span data-lang-zh style="display: none"
+              >[SIGIR'26]. 我们的论文 "SkyDistill" 被第49届 ACM SIGIR 信息检索研究与发展会议接收！</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Apr 01</i>
           </div>
         </div>
         
         <div class="my-1 d-flex">
-          <div>[SIGIR'26]. We are happy that "PCANet" has been accepted by the Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval ! 🎉</div>
+          <div>
+            <span data-lang-en>[SIGIR'26]. We are happy that "PCANet" has been accepted by the Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval ! 🎉</span
+            ><span data-lang-zh style="display: none"
+              >[SIGIR'26]. 我们的论文 "PCANet" 被第49届 ACM SIGIR 信息检索研究与发展会议接收！🎉</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Apr 01</i>
           </div>
         </div>
         
         <div class="my-1 d-flex">
-          <div>[AAAI'26]. We are happy that "DCRNet" has been accepted by the Proceedings of the AAAI Conference on Artificial Intelligence !</div>
+          <div>
+            <span data-lang-en>[AAAI'26]. We are happy that "DCRNet" has been accepted by the Proceedings of the AAAI Conference on Artificial Intelligence !</span
+            ><span data-lang-zh style="display: none"
+              >[AAAI'26]. 我们的论文 "DCRNet" 被 AAAI 人工智能会议接收！</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Mar 14</i>
           </div>
@@ -475,28 +562,48 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
       <div class="media-body">
         
         <div class="my-1 d-flex">
-          <div>[KDD'25]. We are happy that "CPNet" has been accepted by the Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 ! </div>
+          <div>
+            <span data-lang-en>[KDD'25]. We are happy that "CPNet" has been accepted by the Proceedings of the 31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining V.2 !</span
+            ><span data-lang-zh style="display: none"
+              >[KDD'25]. 我们的论文 "CPNet" 被第31届 ACM SIGKDD 知识发现与数据挖掘会议接收！</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Aug 04</i>
           </div>
         </div>
         
         <div class="my-1 d-flex">
-          <div>[CN119669581B]. 专利“一种推荐模型的优化方法、装置”已顺利通过审核并被接收 ! 🎉🎉🎉</div>
+          <div>
+            <span data-lang-en>[CN119669581B]. 专利”一种推荐模型的优化方法、装置”已顺利通过审核并被接收 ! 🎉🎉🎉</span
+            ><span data-lang-zh style="display: none"
+              >[CN119669581B]. 专利”一种推荐模型的优化方法、装置”已顺利通过审核并被接收！🎉🎉🎉</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Jul 11</i>
           </div>
         </div>
         
         <div class="my-1 d-flex">
-          <div>[CN119669582B]. 专利“票务推荐方法、系统、出行服务器及程序”已顺利通过审核并被接收 ! 🎉🎉🎉</div>
+          <div>
+            <span data-lang-en>[CN119669582B]. 专利”票务推荐方法、系统、出行服务器及程序”已顺利通过审核并被接收 ! 🎉🎉🎉</span
+            ><span data-lang-zh style="display: none"
+              >[CN119669582B]. 专利”票务推荐方法、系统、出行服务器及程序”已顺利通过审核并被接收！🎉🎉🎉</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Jun 11</i>
           </div>
         </div>
         
         <div class="my-1 d-flex">
-          <div>[ICLR'25]. We are happy that "GPromptShield" has been accepted by the Thirteenth International Conference on Learning Representations !</div>
+          <div>
+            <span data-lang-en>[ICLR'25]. We are happy that "GPromptShield" has been accepted by the Thirteenth International Conference on Learning Representations !</span
+            ><span data-lang-zh style="display: none"
+              >[ICLR'25]. 我们的论文 "GPromptShield" 被第十三届国际学习表征会议（ICLR）接收！</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Feb 07</i>
           </div>
@@ -513,7 +620,12 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
       <div class="media-body">
         
         <div class="my-1 d-flex">
-          <div>[TCSS'24]. We are happy that "MTSSL" has been accepted by the IEEE Transactions on Computational Social Systems !</div>
+          <div>
+            <span data-lang-en>[TCSS'24]. We are happy that "MTSSL" has been accepted by the IEEE Transactions on Computational Social Systems !</span
+            ><span data-lang-zh style="display: none"
+              >[TCSS'24]. 我们的论文 "MTSSL" 被 IEEE Transactions on Computational Social Systems 接收！</span
+            >
+          </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>Dec 17</i>
           </div>
@@ -526,17 +638,22 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
 </div>
      
 <div class="my-3 p-0 bg-white shadow-sm rounded-xl">
-    <h6 class="border-bottom border-gray p-3 mb-0">
-        <span
+  <h6 class="border-bottom border-gray p-3 mb-0">
+    <span
       data-lang-en
       ><i class="fas fa-star"></i> Selected Publications</span
     ><span data-lang-zh style="display: none"
       ><i class="fas fa-star"></i> 代表论文</span
-    > 
-        <a href="/publications">(view all <i class="fas fa-angle-double-right"></i>)</a>
-    </h6>
-    
-        
+    >
+    <a href="/publications"
+      ><span data-lang-en
+        >(view all <i class="fas fa-angle-double-right"></i>)</span
+      ><span data-lang-zh style="display: none"
+        >(查看全部 <i class="fas fa-angle-double-right"></i>)</span
+      ></a
+    >
+  </h6>
+   
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/PCANet.png" alt="PCANet: Price Change Aware Framework for Mitigating Inconsistencies in Large-Scale Ranking Systems" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -597,9 +714,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/SkyDistill.png" alt="SkyDistill: Navigating Fuzzy Flight Search Ranking via Precise Intent Distillation" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -660,9 +775,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/DCRNet.png" alt="DCRNet: Delayed Conversion Modeling Based Personalized Flight Itinerary Ranking Network" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -725,9 +838,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/CPNet.png" alt="CPNet: A Context based Personalized Deep Network for Nearby Flight Recommendation" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -788,9 +899,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/GPromptShield.png" alt="GPromptShield: Elevating Resilience in Graph Prompt Tuning Against Adversarial Attacks" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -855,9 +964,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/MTSSL.png" alt="MTSSL: Multitask-based self-supervised learning for recommendation in social systems" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -930,9 +1037,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/FMTL.png" alt="FMTL: Multitask learning using feature extraction network for smart tourism applications" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -1005,9 +1110,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/FSLNet.png" alt="FSLNet: Episodic Few-Shot Adaptation for Industrial Recommender Systems" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -1066,9 +1169,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/HGPNet.png" alt="HGPNet: Hierarchical Granularity based Personalized Recommendation Network for Auxiliary Product Sales" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -1129,9 +1230,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/ID-Net.png" alt="ID-Net: Intent-Drift-Aware Dual Debiasing for Large-Scale Channel Recommendation" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -1190,9 +1289,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/Learning%20What%20to%20Optimize.png" alt="Learning What to Optimize: A Meta-Learning Approach to Personalized Ranking" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -1251,9 +1348,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/OmniJourney.png" alt="OmniJourney: A Unified Deep Learning Framework for Mix-modal Transportation Ranking" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -1312,9 +1407,7 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-        
+</div>  
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <div class="col-md-3 col-xl-2 mb-md-0 p-md-3"><img data-src="/assets/images/covers/CRC.png" alt="CRA: A Tripartite Adaptation Framework for Robust Promotional Drift Mitigation in Industrial Recommendation" class="lazy w-100 rounded-sm" src="/assets/images/empty_300x200.png"></div>
@@ -1373,13 +1466,16 @@ document.querySelectorAll(".root-path-text").forEach(function(element){
         </div>
     </div>
 
-</div>    
-    
-    <h6 class="d-block p-3 mt-0 text-right">
-        <a href="/publications">All publications <i class="fas fa-angle-double-right"></i></a>
-    </h6>
+</div> 
+  <h6 class="d-block p-3 mt-0 text-right">
+    <a href="/publications"
+      ><span data-lang-en
+        >All publications <i class="fas fa-angle-double-right"></i></span
+      ><span data-lang-zh style="display: none"
+        >所有论文 <i class="fas fa-angle-double-right"></i></span
+    ></a>
+  </h6>
 </div>
-
  
   </div>
 </div>
