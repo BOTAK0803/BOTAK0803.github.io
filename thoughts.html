@@ -1,0 +1,31 @@
+---
+layout: default
+title: Thoughts
+navbar_title: Thoughts
+---
+
+{% assign thoughts = site.thoughts | sort: "date" | reverse %}
+
+<div class="row">
+  <div class="col-12">
+    <h2 class="pt-4">💭 Thoughts</h2>
+    <div class="my-0 p-0 bg-white shadow-sm rounded-xl">
+      {% for item in thoughts %}
+      <div class="p-3 {% unless forloop.last %}border-bottom{% endunless %}">
+        <div class="d-flex align-items-start">
+          <span
+            class="text-muted mr-3"
+            style="min-width: 90px; font-size: 0.9em"
+          >
+            <i class="far fa-calendar-alt"></i>
+            {{ item.date | date: "%Y-%m-%d" }}
+          </span>
+          <div>{{ item.content }}</div>
+        </div>
+      </div>
+      {% endfor %} {% if thoughts.size == 0 %}
+      <div class="p-3 text-muted text-center">No thoughts yet.</div>
+      {% endif %}
+    </div>
+  </div>
+</div>

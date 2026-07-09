@@ -24,7 +24,7 @@
       <ul class="navbar-nav ml-auto">
         {% for item in site.data.navigation.pages %}
         <li
-          class="nav-item {% if item.name == page.navbar_title %}active{% endif %}"
+          class="nav-item {% if item.name == page.navbar_title %}active{% endif %} {% if item.hidden %}d-none admin-only{% endif %}"
         >
           <a class="nav-link" href="{{ item.url | relative_url }}"
             >{{ item.name }}</a
@@ -44,3 +44,19 @@
     </div>
   </div>
 </nav>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("admin") === "1") {
+      localStorage.setItem("admin-mode", "1");
+      // Clean up URL without reload
+      var cleanUrl = window.location.pathname;
+      window.history.replaceState({}, "", cleanUrl);
+    }
+    if (localStorage.getItem("admin-mode") === "1") {
+      document.querySelectorAll(".admin-only").forEach(function (el) {
+        el.classList.remove("d-none");
+      });
+    }
+  })();
+</script>
