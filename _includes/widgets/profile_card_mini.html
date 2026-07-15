@@ -92,6 +92,39 @@
                         {% endif %}
                     </div>
                 </div>
+
+                {% if site.data.profile.highlights %}
+                <div class="row no-gutters profile-highlights mt-2" aria-label="Career highlights">
+                    {% for item in site.data.profile.highlights %}
+                    <div class="col-6 px-1 mb-2">
+                        <div class="profile-highlight h-100 text-center px-1 py-2">
+                            <div class="profile-highlight-value">{{ item.value }}</div>
+                            <div class="profile-highlight-label">
+                                <span data-lang-en>{{ item.label }}</span>
+                                <span data-lang-zh style="display: none">{{ item.label_zh }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if site.data.profile.research_interests %}
+                <div class="profile-research-interests mt-3">
+                    <h6 class="mb-2 text-center">
+                        <span data-lang-en>Research Interests</span>
+                        <span data-lang-zh style="display: none">研究方向</span>
+                    </h6>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        {% for item in site.data.profile.research_interests %}
+                        <span class="profile-interest-tag profile-interest-tag-compact mx-1 mb-2">
+                            <span data-lang-en>{{ item.name }}</span>
+                            <span data-lang-zh style="display: none">{{ item.name_zh }}</span>
+                        </span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
             </div>
         </div>
     </div>

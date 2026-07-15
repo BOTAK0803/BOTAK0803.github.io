@@ -39,38 +39,6 @@
               {{ site.data.profile.short_bio_zh }}
             </div>
 
-            {% if site.data.profile.highlights %}
-            <div class="row no-gutters profile-highlights mt-4" aria-label="Career highlights">
-              {% for item in site.data.profile.highlights %}
-              <div class="col-6 col-lg-3 px-1 mb-2">
-                <div class="profile-highlight h-100 text-center px-2 py-3">
-                  <div class="profile-highlight-value">{{ item.value }}</div>
-                  <div class="profile-highlight-label">
-                    <span data-lang-en>{{ item.label }}</span>
-                    <span data-lang-zh style="display: none">{{ item.label_zh }}</span>
-                  </div>
-                </div>
-              </div>
-              {% endfor %}
-            </div>
-            {% endif %}
-
-            {% if site.data.profile.research_interests %}
-            <div class="profile-research-interests mt-4">
-              <h5 class="mb-3">
-                <span data-lang-en>Research Interests</span>
-                <span data-lang-zh style="display: none">研究方向</span>
-              </h5>
-              <div class="d-flex flex-wrap">
-                {% for item in site.data.profile.research_interests %}
-                <span class="profile-interest-tag mr-2 mb-2">
-                  <span data-lang-en>{{ item.name }}</span>
-                  <span data-lang-zh style="display: none">{{ item.name_zh }}</span>
-                </span>
-                {% endfor %}
-              </div>
-            </div>
-            {% endif %}
           </div>
         </div>
       </div>

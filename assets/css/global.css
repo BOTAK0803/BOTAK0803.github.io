@@ -120,3 +120,8 @@ div.lazy {
     font-weight: 600;
     padding: 0.38rem 0.75rem;
 }
+
+.profile-interest-tag-compact {
+    font-size: 0.74rem;
+    padding: 0.28rem 0.55rem;
+}
