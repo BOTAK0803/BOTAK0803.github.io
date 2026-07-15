@@ -23,47 +23,19 @@ dblp: https://dblp.org/pid/359/5351.html
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am a researcher and senior algorithm engineer at Alibaba in Beijing, specializing in large-scale ranking and recommendation systems, supply and revenue optimization, and LLM-powered ranking and agents. My work spans the full lifecycle of industrial AI, from problem formulation, data and feature development, and model design to online serving, experimentation, and continuous optimization under strict latency and reliability constraints. My research interests include generative ranking, user behavior and intent modeling, temporal and delayed-feedback learning, LLM alignment, parameter-efficient fine-tuning, reinforcement learning, multi-agent collaboration, multi-task learning, cross-domain transfer, and multi-objective optimization.
+    I am a <strong>researcher and senior algorithm engineer at Alibaba in Beijing</strong>, specializing in <strong>large-scale ranking and recommendation systems</strong>, <strong>supply and revenue optimization</strong>, and <strong>LLM-powered ranking and agents</strong>. My work spans the full lifecycle of industrial AI, from problem formulation, data and feature development, and model design to online serving, experimentation, and continuous optimization under strict latency and reliability constraints. My research interests include <strong>generative ranking, user behavior and intent modeling, temporal and delayed-feedback learning, LLM alignment, parameter-efficient fine-tuning, reinforcement learning, multi-agent collaboration, multi-task learning, cross-domain transfer, and multi-objective optimization</strong>.
   </p>
   <p>
-    I received my M.S. in Computer Architecture from the University of Chinese Academy of Sciences, where I studied at the Institute of Computing Technology, Chinese Academy of Sciences, and my B.S. in Software Engineering from Shandong University. My work has led to first-author publications at KDD, AAAI, and SIGIR, as well as granted invention patents. I also serve as a reviewer for leading AI, information retrieval, and data mining venues, including KDD, RecSys, and SIGIR. My goal is to build a productive feedback loop between research and production: real-world challenges inspire new algorithmic formulations, while research advances are translated into robust, scalable systems that deliver measurable improvements in user experience and business efficiency.
+    I received my <strong>M.S. in Computer Architecture</strong> from the <strong>University of Chinese Academy of Sciences</strong>, where I studied at the <strong>Institute of Computing Technology, Chinese Academy of Sciences</strong>, and my <strong>B.S. in Software Engineering</strong> from <strong>Shandong University</strong>. My work has led to <strong>first-author publications at KDD, AAAI, and SIGIR</strong>, as well as <strong>granted invention patents</strong>. I also serve as a reviewer for leading AI, information retrieval, and data mining venues, including <strong>KDD, RecSys, and SIGIR</strong>. My goal is to build a productive feedback loop between research and production: real-world challenges inspire new algorithmic formulations, while research advances are translated into robust, scalable systems that deliver measurable improvements in user experience and business efficiency.
   </p>
 
 short_bio_zh: >-
   <p>
-    我目前在阿里巴巴北京担任算法研究与高级算法工程师，主要研究方向包括大规模搜索排序与推荐系统、供给与收益优化，以及基于大语言模型的生成式排序与智能体。我的工作覆盖工业智能系统的完整链路，包括业务问题抽象、数据与特征建设、模型设计、在线服务、实验评估，以及严格时延与稳定性约束下的持续迭代。研究兴趣包括生成式排序、用户行为与意图建模、时序及延迟反馈学习、LLM 对齐、参数高效微调、强化学习、多智能体协作、多任务学习、跨域迁移和多目标优化。
+    我目前在<strong>阿里巴巴北京担任算法研究与高级算法工程师</strong>，主要研究方向包括<strong>大规模搜索排序与推荐系统</strong>、<strong>供给与收益优化</strong>，以及<strong>基于大语言模型的生成式排序与智能体</strong>。我的工作覆盖工业智能系统的完整链路，包括业务问题抽象、数据与特征建设、模型设计、在线服务、实验评估，以及严格时延与稳定性约束下的持续迭代。研究兴趣包括<strong>生成式排序、用户行为与意图建模、时序及延迟反馈学习、LLM 对齐、参数高效微调、强化学习、多智能体协作、多任务学习、跨域迁移和多目标优化</strong>。
   </p>
   <p>
-    我本科毕业于山东大学软件工程专业，随后在中国科学院计算技术研究所学习，并获得中国科学院大学计算机系统结构硕士学位。相关研究成果以第一作者发表于 KDD、AAAI、SIGIR 等国际顶级会议，并获得多项发明专利授权；同时担任 KDD、RecSys、SIGIR 等人工智能、信息检索与数据挖掘领域国际会议审稿人。我希望持续构建学术研究与工业实践之间的正向闭环：从真实生产问题中提炼具有研究价值的算法问题，再将研究成果转化为稳定、可扩展的工业系统，持续改善用户体验、商业效率和长期技术竞争力。
+    我本科毕业于<strong>山东大学软件工程专业</strong>，随后在<strong>中国科学院计算技术研究所</strong>学习，并获得<strong>中国科学院大学计算机系统结构硕士学位</strong>。相关研究成果以<strong>第一作者发表于 KDD、AAAI、SIGIR 等国际顶级会议</strong>，并获得<strong>多项发明专利授权</strong>；同时担任 <strong>KDD、RecSys、SIGIR</strong> 等人工智能、信息检索与数据挖掘领域国际会议审稿人。我希望持续构建学术研究与工业实践之间的正向闭环：从真实生产问题中提炼具有研究价值的算法问题，再将研究成果转化为稳定、可扩展的工业系统，持续改善用户体验、商业效率和长期技术竞争力。
   </p>
-
-highlights:
-- value: "3"
-  label: First-author Papers
-  label_zh: 第一作者论文
-- value: "2+"
-  label: Granted Patents
-  label_zh: 授权发明专利
-- value: "2+"
-  label: Production Systems
-  label_zh: 工业落地系统
-- value: "3"
-  label: Research Areas
-  label_zh: 核心研究方向
-
-research_interests:
-- name: Generative Ranking
-  name_zh: 生成式排序
-- name: User Intent Modeling
-  name_zh: 用户意图建模
-- name: Delayed Feedback Learning
-  name_zh: 延迟反馈学习
-- name: LLM Alignment
-  name_zh: LLM 对齐
-- name: Reinforcement Learning
-  name_zh: 强化学习
-- name: Multi-Agent Systems
-  name_zh: 多智能体系统
 
 portrait_url: /assets/images/photos/cat.jpg
 # portrait_caption: >-
