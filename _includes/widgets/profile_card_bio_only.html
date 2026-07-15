@@ -40,11 +40,14 @@
             </div>
             {% if site.data.profile.cv_link %}
             <a
+              class="btn btn-outline-primary mt-3"
               target="_blank"
+              rel="noopener noreferrer"
               href="{{ site.data.profile.cv_link | relative_url }}"
-              ><i class="fas fa-file-alt"></i> Curriculum Vitae</a
+              ><i class="fas fa-file-pdf mr-1"></i>
+              <span data-lang-en>Curriculum Vitae</span>
+              <span data-lang-zh style="display: none">个人简历</span></a
             >
-            <br />
             {% endif %}
           </div>
         </div>

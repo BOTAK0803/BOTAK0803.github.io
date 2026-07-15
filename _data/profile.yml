@@ -9,7 +9,7 @@ positions:
 
 
 email: "hmlbotak@gmail.com"
-# cv_link: https://botak0803.github.io/
+cv_link: /assets/files/Maolei_Huang_CV.pdf
 gscholar: rvd56c4AAAAJ  # This is an example, replace it with your own Google Scholar ID
 github: https://github.com/BOTAK0803
 # twitter: your_twitter_id  # Do not include the '@' symbol
@@ -23,18 +23,18 @@ dblp: https://dblp.org/pid/359/5351.html
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    I am a Researcher at <strong>Alibaba (Beijing)</strong> specializing in <strong>Ranking & Recommendation Systems, Supply Chain Optimization, and LLM & Agent Optimization</strong>. My work centers on designing and deploying robust, large-scale recommendation engines and intelligent agent workflows that power high-concurrency, complex commercial ecosystems. Driven by a passion for pushing the frontiers of Deep Learning and Generative AI, I explore how large language models and autonomous agents can revolutionize user understanding and industrial decision-making. My research and engineering expertise spans LLM alignment, parameter-efficient fine-tuning, and multi-agent collaboration, alongside traditional paradigms like multi-task learning, cross-domain transfer learning, and large-scale revenue optimization.
+    I am a researcher and senior algorithm engineer at Alibaba in Beijing, specializing in large-scale ranking and recommendation systems, supply and revenue optimization, and LLM-powered ranking and agents. My work spans the full lifecycle of industrial AI, from problem formulation, data and feature development, and model design to online serving, experimentation, and continuous optimization under strict latency and reliability constraints. My research interests include generative ranking, user behavior and intent modeling, temporal and delayed-feedback learning, LLM alignment, parameter-efficient fine-tuning, reinforcement learning, multi-agent collaboration, multi-task learning, cross-domain transfer, and multi-objective optimization.
   </p>
   <p>
-    I hold an <strong>M.S.</strong> in Computer Architecture from the Institute of Computing Technology (<strong>ICT</strong>), University of Chinese Academy of Sciences (<strong>UCAS</strong>), and a B.S. in Software Engineering from Shandong University (<strong>SDU</strong>). To stay at the vanguard of scientific discovery, I actively engage with the global research community as a regular reviewer for premier AI, information retrieval, and data mining venues, including KDD, RecSys, and SIGIR. My career is defined by cultivating a symbiotic relationship between academic rigor and industrial scale. I excel at translating complex, theoretical breakthroughs into robust, production-grade software, while simultaneously leveraging real-world production challenges to inspire novel algorithmic formulations. This closed-loop approach allows me to consistently deliver measurable improvements in user experience and business efficiency, securing sustainable, long-term technological advantages.
+    I received my M.S. in Computer Architecture from the University of Chinese Academy of Sciences, where I studied at the Institute of Computing Technology, Chinese Academy of Sciences, and my B.S. in Software Engineering from Shandong University. My work has led to first-author publications at KDD, AAAI, and SIGIR, as well as granted invention patents. I also serve as a reviewer for leading AI, information retrieval, and data mining venues, including KDD, RecSys, and SIGIR. My goal is to build a productive feedback loop between research and production: real-world challenges inspire new algorithmic formulations, while research advances are translated into robust, scalable systems that deliver measurable improvements in user experience and business efficiency.
   </p>
 
 short_bio_zh: >-
   <p>
-    我是<strong>阿里巴巴（北京）</strong>的研究员，专注于<strong>排序与推荐系统、供应链优化以及大语言模型（LLM）与智能体（Agent）优化</strong>。我的工作聚焦于设计和部署鲁棒的大规模推荐引擎与智能体工作流，为高并发、复杂的商业生态提供支撑。我对深度学习和生成式 AI 的前沿探索充满热情，致力于研究大语言模型和自主智能体如何革新用户理解与工业决策。我的研究与工程能力涵盖 LLM 对齐、参数高效微调、多智能体协作，以及多任务学习、跨域迁移学习和大规模收入优化等传统范式。
+    我目前在阿里巴巴北京担任算法研究与高级算法工程师，主要研究方向包括大规模搜索排序与推荐系统、供给与收益优化，以及基于大语言模型的生成式排序与智能体。我的工作覆盖工业智能系统的完整链路，包括业务问题抽象、数据与特征建设、模型设计、在线服务、实验评估，以及严格时延与稳定性约束下的持续迭代。研究兴趣包括生成式排序、用户行为与意图建模、时序及延迟反馈学习、LLM 对齐、参数高效微调、强化学习、多智能体协作、多任务学习、跨域迁移和多目标优化。
   </p>
   <p>
-    我获得了中国科学院大学计算技术研究所（<strong>ICT, UCAS</strong>）的计算机体系结构硕士学位，以及山东大学（<strong>SDU</strong>）的软件工程学士学位。为保持在科学前沿的敏锐洞察，我积极参与全球学术社区，担任 KDD、RecSys、SIGIR 等顶级 AI、信息检索和数据挖掘会议的审稿人。我的职业生涯致力于构建学术严谨性与工业规模之间的共生关系：一方面，我擅长将复杂的理论突破转化为稳健的生产级系统；另一方面，我善于从真实生产环境的挑战中提炼出新颖的算法方案。这种闭环方法使我能够持续在用户体验和商业效率方面带来可衡量的提升，确保可持续的长期技术竞争优势。
+    我本科毕业于山东大学软件工程专业，随后在中国科学院计算技术研究所学习，并获得中国科学院大学计算机系统结构硕士学位。相关研究成果以第一作者发表于 KDD、AAAI、SIGIR 等国际顶级会议，并获得多项发明专利授权；同时担任 KDD、RecSys、SIGIR 等人工智能、信息检索与数据挖掘领域国际会议审稿人。我希望持续构建学术研究与工业实践之间的正向闭环：从真实生产问题中提炼具有研究价值的算法问题，再将研究成果转化为稳定、可扩展的工业系统，持续改善用户体验、商业效率和长期技术竞争力。
   </p>
 
 portrait_url: /assets/images/photos/cat.jpg
