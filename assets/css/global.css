@@ -90,3 +90,33 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
+.profile-highlight {
+    background: #f8f9fb;
+    border: 1px solid #e9ecef;
+    border-radius: 0.65rem;
+}
+
+.profile-highlight-value {
+    color: #0056b3;
+    font-size: 1.65rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.profile-highlight-label {
+    color: #6c757d;
+    font-size: 0.78rem;
+    line-height: 1.25;
+    margin-top: 0.4rem;
+}
+
+.profile-interest-tag {
+    background: #eef5ff;
+    border: 1px solid #d7e7fb;
+    border-radius: 999px;
+    color: #245b91;
+    display: inline-block;
+    font-size: 0.86rem;
+    font-weight: 600;
+    padding: 0.38rem 0.75rem;
+}

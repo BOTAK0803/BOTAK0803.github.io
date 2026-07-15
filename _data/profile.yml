@@ -37,6 +37,34 @@ short_bio_zh: >-
     我本科毕业于山东大学软件工程专业，随后在中国科学院计算技术研究所学习，并获得中国科学院大学计算机系统结构硕士学位。相关研究成果以第一作者发表于 KDD、AAAI、SIGIR 等国际顶级会议，并获得多项发明专利授权；同时担任 KDD、RecSys、SIGIR 等人工智能、信息检索与数据挖掘领域国际会议审稿人。我希望持续构建学术研究与工业实践之间的正向闭环：从真实生产问题中提炼具有研究价值的算法问题，再将研究成果转化为稳定、可扩展的工业系统，持续改善用户体验、商业效率和长期技术竞争力。
   </p>
 
+highlights:
+- value: "3"
+  label: First-author Papers
+  label_zh: 第一作者论文
+- value: "2+"
+  label: Granted Patents
+  label_zh: 授权发明专利
+- value: "2+"
+  label: Production Systems
+  label_zh: 工业落地系统
+- value: "3"
+  label: Research Areas
+  label_zh: 核心研究方向
+
+research_interests:
+- name: Generative Ranking
+  name_zh: 生成式排序
+- name: User Intent Modeling
+  name_zh: 用户意图建模
+- name: Delayed Feedback Learning
+  name_zh: 延迟反馈学习
+- name: LLM Alignment
+  name_zh: LLM 对齐
+- name: Reinforcement Learning
+  name_zh: 强化学习
+- name: Multi-Agent Systems
+  name_zh: 多智能体系统
+
 portrait_url: /assets/images/photos/cat.jpg
 # portrait_caption: >-
 #   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
