@@ -34,16 +34,14 @@
                     </div>
                 </div>
 
-                <div class="row small">
-                    <div class="col text-center">
-                        <a class="email-text" href="mailto:{{ site.data.profile.email | encode_email }}">
-                            {{ site.data.profile.email | replace: "@", "(at)" }}
-                        </a>
-                    </div>
-                </div>
-
                 <div class="row pt-2">
                     <div class="col text-center h4">
+                        {% if site.data.profile.email %}
+                        <a class="px-1 no-break" href="mailto:{{ site.data.profile.email | encode_email }}" data-toggle="tooltip" data-placement="top" title="Email" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        {% endif %}
+
                         {% if site.data.profile.gscholar %}
                         {%- if site.data.profile.gscholar contains 'scholar.google' -%}
                         {%- assign gscholar_url = site.data.profile.gscholar -%}
