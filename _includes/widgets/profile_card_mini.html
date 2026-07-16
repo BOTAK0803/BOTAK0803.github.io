@@ -42,6 +42,13 @@
                         </a>
                         {% endif %}
 
+                        {% if site.data.profile.phone %}
+                        {% assign phone_href = site.data.profile.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' %}
+                        <a class="px-1 no-break" href="tel:{{ phone_href }}" data-toggle="tooltip" data-placement="top" title="Phone: {{ site.data.profile.phone }}" aria-label="Phone: {{ site.data.profile.phone }}">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        {% endif %}
+
                         {% if site.data.profile.gscholar %}
                         {%- if site.data.profile.gscholar contains 'scholar.google' -%}
                         {%- assign gscholar_url = site.data.profile.gscholar -%}

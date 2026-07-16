@@ -103,12 +103,20 @@ div.lazy {
 
 .profile-social-links > a,
 .profile-social-links > span {
+    align-items: center;
     display: inline-flex;
     flex: 0 0 auto;
-    margin: 0 0.22rem;
+    justify-content: center;
+    margin: 0 0.12rem;
+    width: 1.35rem;
 }
 
 .profile-social-links a {
+    justify-content: center;
     padding-left: 0 !important;
     padding-right: 0 !important;
+}
+
+.profile-social-links > span > a {
+    width: 100%;
 }
