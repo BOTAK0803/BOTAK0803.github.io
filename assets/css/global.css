@@ -94,7 +94,7 @@ div.lazy {
     align-items: center;
     display: flex;
     flex-wrap: nowrap;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     justify-content: center;
     line-height: 1;
     min-width: 0;
@@ -108,7 +108,7 @@ div.lazy {
     flex: 0 0 auto;
     justify-content: center;
     margin: 0 0.12rem;
-    width: 1.35rem;
+    width: 1.45rem;
 }
 
 .profile-social-links a {
