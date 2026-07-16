@@ -89,3 +89,17 @@ div.lazy {
 .email-text {
     font-family: Source Code Pro, monospace;
 }
+
+.profile-social-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.profile-social-links > a,
+.profile-social-links > span {
+    display: inline-flex;
+    flex: 0 0 auto;
+}
