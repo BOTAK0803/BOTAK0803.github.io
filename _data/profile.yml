@@ -60,13 +60,13 @@ education:
 
 experience:
 
-- name: AMAP
-  name_zh: 高德地图
-  logo: /assets/images/badges/amap.png
-  position: Algorithm Expert
-  position_zh: 算法专家
-  date: Jul. 2026 - present
-  date_zh: 2026.07 - 至今
+# - name: AMAP
+#   name_zh: 高德地图
+#   logo: /assets/images/badges/amap.png
+#   position: Algorithm Expert
+#   position_zh: 算法专家
+#   date: Jul. 2026 - present
+#   date_zh: 2026.07 - 至今
 
 - name: Alibaba
   name_zh: 阿里巴巴
