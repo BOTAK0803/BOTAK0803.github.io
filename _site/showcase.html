@@ -72,7 +72,7 @@
       <ul class="navbar-nav ml-auto">
         
         <li
-          class="nav-item "
+          class="nav-item  "
         >
           <a class="nav-link" href="/"
             >Home</a
@@ -80,10 +80,18 @@
         </li>
         
         <li
-          class="nav-item "
+          class="nav-item  "
         >
           <a class="nav-link" href="/publications"
             >Publications</a
+          >
+        </li>
+        
+        <li
+          class="nav-item  d-none admin-only"
+        >
+          <a class="nav-link" href="/thoughts"
+            >Thoughts</a
           >
         </li>
         
@@ -100,6 +108,22 @@
     </div>
   </div>
 </nav>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("admin") === "1") {
+      localStorage.setItem("admin-mode", "1");
+      // Clean up URL without reload
+      var cleanUrl = window.location.pathname;
+      window.history.replaceState({}, "", cleanUrl);
+    }
+    if (localStorage.getItem("admin-mode") === "1") {
+      document.querySelectorAll(".admin-only").forEach(function (el) {
+        el.classList.remove("d-none");
+      });
+    }
+  })();
+</script>
 
     <div
       class="container-lg"
@@ -146,11 +170,13 @@
                         </div>
                         <div class="text-profile-bio mt-3" >
                             <p>
-  I am a Researcher at <strong>Alibaba (Beijing)</strong> specializing in <strong>Ranking & Recommendation Systems, Supply Chain Optimization, and LLM & Agent Optimization</strong>. My work centers on designing and deploying robust, large-scale recommendation engines and intelligent agent workflows that power high-concurrency, complex commercial ecosystems. Driven by a passion for pushing the frontiers of Deep Learning and Generative AI, I explore how large language models and autonomous agents can revolutionize user understanding and industrial decision-making. My research and engineering expertise spans LLM alignment, parameter-efficient fine-tuning, and multi-agent collaboration, alongside traditional paradigms like multi-task learning, cross-domain transfer learning, and large-scale revenue optimization.
+  I am a <strong>researcher</strong> and <strong>senior algorithm engineer</strong> at <strong>Alibaba</strong> in <strong>Beijing</strong>, specializing in <strong>large-scale ranking</strong> and <strong>recommendation systems</strong>, <strong>supply optimization</strong> and <strong>revenue optimization</strong>, and <strong>LLM-powered ranking</strong> and <strong>agents</strong>. My work spans the full lifecycle of industrial AI, from problem formulation, data and feature development, and model design to online serving, experimentation, and continuous optimization under strict latency and reliability constraints. My research interests include <strong>generative ranking</strong>, <strong>user behavior</strong> and <strong>intent modeling</strong>, <strong>temporal learning</strong> and <strong>delayed-feedback learning</strong>, <strong>LLM alignment</strong>, <strong>parameter-efficient fine-tuning</strong>, <strong>reinforcement learning</strong>, <strong>multi-agent collaboration</strong>, <strong>multi-task learning</strong>, <strong>cross-domain transfer</strong>, and <strong>multi-objective optimization</strong>.
 </p> <p>
-  I hold an <strong>M.S.</strong> in Computer Architecture from the Institute of Computing Technology (<strong>ICT</strong>), University of Chinese Academy of Sciences (<strong>UCAS</strong>), which instilled in me a strong foundation in high-performance systems and computational efficiency, and a B.S. in Software Engineering from Shandong University (<strong>SDU</strong>). To stay at the vanguard of scientific discovery, I actively engage with the global research community as a regular reviewer for premier AI, information retrieval, and data mining venues, including KDD, RecSys, and SIGIR. My career is defined by cultivating a symbiotic relationship between academic rigor and industrial scale. I excel at translating complex, theoretical breakthroughs into robust, production-grade software, while simultaneously leveraging real-world production challenges to inspire novel algorithmic formulations. This closed-loop approach allows me to consistently deliver measurable improvements in user experience and business efficiency, securing sustainable, long-term technological advantages.
+  I received my <strong>M.S. in Computer Architecture</strong> from the <strong>University of Chinese Academy of Sciences</strong> (<strong>UCAS</strong>), where I studied at the <strong>Institute of Computing Technology</strong> (<strong>ICT</strong>), <strong>Chinese Academy of Sciences</strong> (<strong>CAS</strong>), and my <strong>B.S. in Software Engineering</strong> from <strong>Shandong University</strong> (<strong>SDU</strong>). My work has led to publications at <strong>KDD</strong>, <strong>AAAI</strong>, <strong>SIGIR</strong>, <strong>ICLR</strong>, and <strong>IEEE IoT-J</strong>, including <strong>first-author publications</strong> at <strong>KDD</strong>, <strong>AAAI</strong>, and <strong>SIGIR</strong>, as well as <strong>granted invention patents</strong>. I also serve as a reviewer for leading AI, information retrieval, and data mining venues, including <strong>KDD</strong>, <strong>RecSys</strong>, and <strong>SIGIR</strong>. My goal is to build a productive feedback loop between research and production: real-world challenges inspire new algorithmic formulations, while research advances are translated into robust, scalable systems that deliver measurable improvements in user experience and business efficiency.
 </p>
                         </div>
+                        
+                            <a target="_blank" href="/assets/files/Maolei%20Huang.pdf"><i class="fas fa-file-alt"></i> Curriculum Vitae</a> <br/>
                         
                     </div>
         
@@ -168,7 +194,7 @@
                         
                         
                         
-                        <a class="pr-3 no-break" target="_blank" href="https://github.com/https://github.com/BOTAK0803">
+                        <a class="pr-3 no-break" target="_blank" href="https://github.com/BOTAK0803">
                             <i class="fab fa-github"></i> GitHub
                         </a>
                         
@@ -226,8 +252,8 @@
           <div class="col-lg-6">
             <div class="mx-2 my-1">
               <h6>
-                <span data-lang-en>Education</span
-                ><span data-lang-zh style="display: none">教育经历</span>
+                <span data-lang-en><i class="fas fa-graduation-cap mr-1"></i>Education</span
+                ><span data-lang-zh style="display: none"><i class="fas fa-graduation-cap mr-1"></i>教育经历</span>
               </h6>
               <ul class="list-unstyled mb-1">
                 
@@ -306,10 +332,44 @@
           <div class="col-lg-6">
             <div class="mx-2 my-1">
               <h6>
-                <span data-lang-en>Experience</span
-                ><span data-lang-zh style="display: none">工作经历</span>
+                <span data-lang-en><i class="fas fa-briefcase mr-1"></i>Experience</span
+                ><span data-lang-zh style="display: none"><i class="fas fa-briefcase mr-1"></i>工作经历</span>
               </h6>
               <ul class="list-unstyled mb-1">
+                
+                <li class="media mb-1">
+                  <img
+                    src="/assets/images/badges/amap.png"
+                    alt="AMAP"
+                    style="width: 18px"
+                    class="mr-1 mt-1"
+                  />
+                  <div class="media-body">
+                    <div>
+                      <span data-lang-en>AMAP</span
+                      ><span data-lang-zh style="display: none"
+                        >高德地图</span
+                      >
+                    </div>
+                    <div class="small"></div>
+                    <div class="small d-flex">
+                      <div>
+                        <span data-lang-en>Algorithm Expert</span
+                        ><span data-lang-zh style="display: none"
+                          >算法专家</span
+                        >
+                      </div>
+                      <div class="mt-auto ml-auto no-break">
+                        <em
+                          ><span data-lang-en>Jul. 2026 - present</span
+                          ><span data-lang-zh style="display: none"
+                            >2026.07 - 至今</span
+                          ></em
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </li>
                 
                 <li class="media mb-1">
                   <img
@@ -335,9 +395,9 @@
                       </div>
                       <div class="mt-auto ml-auto no-break">
                         <em
-                          ><span data-lang-en>Sep. 2022 - present</span
+                          ><span data-lang-en>Sep. 2022 - Jul. 2026</span
                           ><span data-lang-zh style="display: none"
-                            >2022.09 - 至今</span
+                            >2022.09 - 2026.07</span
                           ></em
                         >
                       </div>
@@ -410,9 +470,9 @@
         
         <div class="my-1 d-flex">
           <div>
-            <span data-lang-en>[Alibaba] We are happy that our system "SkyDistill" has been officially certified for successful deployment and application by Alibaba! 🎈🎈🎈</span
+            <span data-lang-en>[Alibaba] We are happy that our system "Fuzzy Search Ranking Optimization System Based on Multi-Level Cross-Scene Knowledge Distillation" has been officially certified for successful deployment and application by Alibaba! 🎈🎈🎈</span
             ><span data-lang-zh style="display: none"
-              >[阿里巴巴] 我们的系统 "SkyDistill" 已正式通过阿里巴巴落地应用认证！🎈🎈🎈</span
+              >[阿里巴巴] 我们的系统 "基于多层级跨场景知识蒸馏的模糊搜索排序优化系统" 已正式通过阿里巴巴落地应用认证！🎈🎈🎈</span
             >
           </div>
           <div class="ml-auto mt-auto text-muted no-break">
@@ -422,9 +482,9 @@
         
         <div class="my-1 d-flex">
           <div>
-            <span data-lang-en>[Alibaba] We are happy that our system "PCANet" has been officially certified for successful deployment and application by Alibaba! 🎈🎈🎈</span
+            <span data-lang-en>[Alibaba] We are happy that our system "Industrial-grade ranking optimization system based on monotonic constraints and anomalous change awareness" has been officially certified for successful deployment and application by Alibaba! 🎈🎈🎈</span
             ><span data-lang-zh style="display: none"
-              >[阿里巴巴] 我们的系统 "PCANet" 已正式通过阿里巴巴落地应用认证！🎈🎈🎈</span
+              >[阿里巴巴] 我们的系统 "基于单调约束与异常变动感知的工业级排序优化系统" 已正式通过阿里巴巴落地应用认证！🎈🎈🎈</span
             >
           </div>
           <div class="ml-auto mt-auto text-muted no-break">
@@ -2103,7 +2163,7 @@
         <div class="row my-3">
             <div class="col-6">
                 <div class="text-muted">
-                    <i>Last updated: Jun 2026</i>
+                    <i>Last updated: Jul 2026</i>
                 </div>
             </div>
             <div class="col-6">

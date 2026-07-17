@@ -14,6 +14,12 @@ h1, h2, h3, h4, h5, h6,
     border-radius: 0.8rem!important;
 }
 
+/* Give content modules a slightly clearer edge than Bootstrap's default shadow. */
+.card.shadow-sm,
+.bg-white.shadow-sm.rounded-xl {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1) !important;
+}
+
 .card-img-overlay {
     border-radius: 0.8rem!important;
 }
@@ -90,3 +96,33 @@ div.lazy {
     font-family: Source Code Pro, monospace;
 }
 
+.profile-social-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 1.25rem;
+    justify-content: center;
+    line-height: 1;
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.profile-social-links > a,
+.profile-social-links > span {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    margin: 0 0.12rem;
+    width: 1.45rem;
+}
+
+.profile-social-links a {
+    justify-content: center;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.profile-social-links > span > a {
+    width: 100%;
+}
