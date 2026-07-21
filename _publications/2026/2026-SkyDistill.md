@@ -18,7 +18,7 @@ authors:
   - Shuhan Song*
   - Huawei Cao
 links:
-  Paper: https://www.biorxiv.org
-  Code: https://www.cell.com
-  Poster: https://www.cell.com
+  Paper:
+  Code:
+  Poster:
 ---

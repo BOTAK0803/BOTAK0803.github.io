@@ -20,7 +20,7 @@ authors:
   - Dong Li
   - Zhuoran Zhuang
 links:
-  Paper: https://dl.acm.org/doi/epdf/10.1145/3711896.3737183
-  Code: https://www.cell.com
-  Poster: https://www.cell.com
+  Paper: https://doi.org/10.1145/3711896.3737183
+  Code:
+  Poster:
 ---

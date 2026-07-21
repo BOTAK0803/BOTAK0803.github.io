@@ -16,7 +16,7 @@ authors:
 - Huawei Cao
 - Shuhan Song
 links:
-  Paper: https://www.cell.com
-  Code: https://www.cell.com
-  Poster: https://www.cell.com
+  Paper:
+  Code:
+  Poster:
 ---

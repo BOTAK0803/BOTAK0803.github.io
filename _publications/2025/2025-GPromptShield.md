@@ -20,7 +20,7 @@ authors:
   - Huawei Cao
   - Xiaochun Ye
 links:
-  Paper: chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://openreview.net/pdf?id=yCN4yI6zhH
-  Code: https://www.cell.com
-  Poster: https://www.cell.com
+  Paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/473aadf077f8464dbae7e9600d9be6c4-Abstract-Conference.html
+  Code:
+  Poster:
 ---

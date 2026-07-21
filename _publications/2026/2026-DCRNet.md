@@ -17,7 +17,7 @@ authors:
   - Shuhan Song
   - Yao Yu
 links:
-  Paper: https://www.cell.com
-  Code: https://www.cell.com
-  Poster: https://www.cell.com
+  Paper: https://ojs.aaai.org/index.php/AAAI/article/view/41433
+  Code:
+  Poster:
 ---

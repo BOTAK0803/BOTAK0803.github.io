@@ -96,6 +96,10 @@ div.lazy {
     font-size: 100%;
 }
 
+.publication-link-unavailable {
+    color: #adb5bd;
+}
+
 .email-text {
     font-family: Source Code Pro, monospace;
 }

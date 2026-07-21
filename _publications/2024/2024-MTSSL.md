@@ -22,7 +22,7 @@ authors:
   - Maolei Huang
   - Jian Wan
 links:
-  Paper: https://ieeexplore.ieee.org/abstract/document/10817116/
-  Code: https://www.cell.com
-  Poster: https://www.cell.com
+  Paper: https://doi.org/10.1109/TCSS.2024.3517164
+  Code:
+  Poster:
 ---

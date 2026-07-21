@@ -37,12 +37,14 @@
       <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
 
       <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-        {% for link in item.links %} {% if link[1].url %}
+        {% for link in item.links %} {% if link[1] and link[1].url %}
         <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}"
           >[{{ link[0] }}]</a
         >
-        {% else %}
+        {% elsif link[1] %}
         <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+        {% else %}
+        <span class="publication-link-unavailable">[{{ link[0] }}]</span>
         {% endif %} {% endfor %}
       </p>
     </div>
@@ -79,12 +81,14 @@
         <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
 
         <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-          {% for link in item.links %} {% if link[1].url %}
+          {% for link in item.links %} {% if link[1] and link[1].url %}
           <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}"
             >[{{ link[0] }}]</a
           >
-          {% else %}
+          {% elsif link[1] %}
           <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
+          {% else %}
+          <span class="publication-link-unavailable">[{{ link[0] }}]</span>
           {% endif %} {% endfor %}
         </p>
       </div>
