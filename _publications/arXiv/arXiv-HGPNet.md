@@ -18,5 +18,5 @@ authors:
 links:
   Paper:
   Code:
-  Poster:
+  Poster: /assets/files/posters/HGPNet-poster.pdf
 ---

@@ -19,6 +19,7 @@ authors:
   - Huawei Cao
 links:
   Paper:
+  Program: https://sigir2026.org/SIGIR2026_program.pdf
   Code:
-  Poster:
+  Poster: /assets/files/posters/SkyDistill.pdf
 ---

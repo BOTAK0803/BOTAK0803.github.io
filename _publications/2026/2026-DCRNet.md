@@ -19,5 +19,5 @@ authors:
 links:
   Paper: https://ojs.aaai.org/index.php/AAAI/article/view/41433
   Code:
-  Poster:
+  Poster: /assets/files/posters/AAAI26_IAAI-35.pdf
 ---
