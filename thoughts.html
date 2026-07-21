@@ -13,14 +13,7 @@ navbar_title: Thoughts
       {% for item in thoughts %}
       <div class="p-3 {% unless forloop.last %}border-bottom{% endunless %}">
         <div class="d-flex align-items-start">
-          <span
-            class="text-muted mr-3"
-            style="min-width: 90px; font-size: 0.9em"
-          >
-            <i class="far fa-calendar-alt"></i>
-            {{ item.date | date: "%Y-%m-%d" }}
-          </span>
-          <div class="thought-content flex-grow-1">
+          <div class="thought-content flex-grow-1 min-width-0">
             {% if item.expandable %}
             <details class="thought-details">
               <summary class="thought-title">{{ item.title }}</summary>
@@ -30,6 +23,10 @@ navbar_title: Thoughts
             <div class="thought-static">{{ item.content }}</div>
             {% endif %}
           </div>
+          <span class="thought-date text-muted ml-3">
+            <i class="far fa-calendar-alt"></i>
+            {{ item.date | date: "%Y-%m-%d" }}
+          </span>
         </div>
       </div>
       {% endfor %} {% if thoughts.size == 0 %}

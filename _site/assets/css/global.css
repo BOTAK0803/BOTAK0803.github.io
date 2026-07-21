@@ -138,6 +138,16 @@ div.lazy {
     list-style: none;
 }
 
+.thought-content {
+    min-width: 0;
+}
+
+.thought-date {
+    flex: 0 0 auto;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
 .thought-title::-webkit-details-marker {
     display: none;
 }
