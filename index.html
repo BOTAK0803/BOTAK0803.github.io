@@ -19,12 +19,12 @@ navbar_title: Home
     size %} {% if count_news > 0 %} {% include widgets/news_card.html
     limit=site.data.display.homepage.num_news %} {% endif %} {% endif %} {% if
     site.data.display.homepage.show_selected_publications %} {% assign pubs =
-    site.publications | sort: "date" | reverse | where: "selected", true %} {%
+    site.publications | sort: "date" | reverse %} {%
     include widgets/publication_card.html publications=pubs title='<span
       data-lang-en
-      ><i class="fas fa-star"></i> Selected Publications</span
+      ><i class="fas fa-star"></i> Latest Publications</span
     ><span data-lang-zh style="display: none"
-      ><i class="fas fa-star"></i> 代表论文</span
-    >' %} {% endif %}
+      ><i class="fas fa-star"></i> 最新论文</span
+    >' limit=site.data.display.homepage.num_publications %} {% endif %}
   </div>
 </div>
