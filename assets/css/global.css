@@ -67,17 +67,32 @@ h1, h2, h3, h4, h5, h6,
     white-space: nowrap;
 }
 
+.news-list {
+    counter-reset: news-item;
+}
+
+.news-item {
+    counter-increment: news-item;
+}
+
+.news-item::before {
+    color: #8a949d;
+    content: counter(news-item, upper-roman) ".";
+    flex: 0 0 2rem;
+    font-weight: 500;
+}
+
 .cover-image {
     width: 180px;
     max-height: 120px;
 }
 
 .publication-cover {
-    aspect-ratio: 3 / 2;
-    background-color: #f4f6f8;
+    background-color: #fff;
     display: block;
+    height: 120px;
     object-fit: contain;
-    padding: 0.35rem;
+    object-position: center;
 }
 
 .publication-cover-mobile {
