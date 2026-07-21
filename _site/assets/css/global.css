@@ -130,3 +130,45 @@ div.lazy {
 .profile-social-links > span > a {
     width: 100%;
 }
+
+.thought-title {
+    color: #3f6f91;
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+}
+
+.thought-title::-webkit-details-marker {
+    display: none;
+}
+
+.thought-title::after {
+    color: #8a9aa5;
+    content: "+";
+    float: right;
+    font-size: 1.15em;
+    font-weight: 400;
+    margin-left: 1rem;
+}
+
+.thought-details[open] > .thought-title::after {
+    content: "−";
+}
+
+.thought-title:hover {
+    color: #2f5874;
+}
+
+.thought-static {
+    color: #59636c;
+}
+
+.thought-body {
+    color: #212529;
+}
+
+.thought-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+}

@@ -20,7 +20,16 @@ navbar_title: Thoughts
             <i class="far fa-calendar-alt"></i>
             {{ item.date | date: "%Y-%m-%d" }}
           </span>
-          <div>{{ item.content }}</div>
+          <div class="thought-content flex-grow-1">
+            {% if item.expandable %}
+            <details class="thought-details">
+              <summary class="thought-title">{{ item.title }}</summary>
+              <div class="thought-body pt-3">{{ item.content }}</div>
+            </details>
+            {% else %}
+            <div class="thought-static">{{ item.content }}</div>
+            {% endif %}
+          </div>
         </div>
       </div>
       {% endfor %} {% if thoughts.size == 0 %}
