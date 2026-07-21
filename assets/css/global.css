@@ -72,6 +72,21 @@ h1, h2, h3, h4, h5, h6,
     max-height: 120px;
 }
 
+.publication-cover {
+    aspect-ratio: 3 / 2;
+    background-color: #f4f6f8;
+    display: block;
+    object-fit: contain;
+    padding: 0.35rem;
+}
+
+.publication-cover-mobile {
+    background-color: #f4f6f8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .abstract-body {
     min-height: 100px;
 }

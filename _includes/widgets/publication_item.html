@@ -8,7 +8,7 @@
       <img
         data-src="{{ item.cover | relative_url }}"
         alt="{{ item.title }}"
-        class="lazy w-100 rounded-sm"
+        class="publication-cover lazy w-100 rounded-sm"
         src="{{ '/assets/images/empty_300x200.png' | relative_url }}"
       />
       {%- else -%}
@@ -50,7 +50,7 @@
 </div>
 
 <div
-  class="row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %} {% if item.cover %}lazy{% endif %}"
+  class="publication-cover-mobile row no-gutters d-md-none {% unless include.hide_bottom_border %}border-bottom{% endunless %} border-gray {% if include.first %}rounded-xl-top{% endif %} {% if include.last %}rounded-xl-bottom{% endif %} {% if item.cover %}lazy{% endif %}"
   data-src="{{ item.cover | relative_url }}"
 >
   <div
