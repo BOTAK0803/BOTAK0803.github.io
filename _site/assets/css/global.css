@@ -1,16 +1,18 @@
 @charset "utf-8";
 body {
-    font-family: "Inter", "Noto Sans SC", "PingFang SC", -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", Arial, sans-serif;
     font-weight: 400;
     padding-top: 5.0rem;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-    font-family: "Inter", "Noto Sans SC", "PingFang SC", -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
-    font-weight: 700;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont,
+        "Helvetica Neue", "PingFang SC", "Hiragino Sans GB",
+        "Microsoft YaHei", Arial, sans-serif;
+    font-weight: 600;
 }
 
 .card {
@@ -127,7 +129,7 @@ div.lazy {
 }
 
 .email-text {
-    font-family: Source Code Pro, monospace;
+    font-family: "SFMono-Regular", Menlo, Monaco, Consolas, monospace;
 }
 
 .profile-social-links {
