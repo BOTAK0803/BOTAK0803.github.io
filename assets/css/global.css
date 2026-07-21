@@ -132,10 +132,12 @@ div.lazy {
 }
 
 .thought-title {
+    align-items: center;
     color: #3f6f91;
-    cursor: pointer;
+    display: flex;
     font-weight: 600;
-    list-style: none;
+    justify-content: space-between;
+    text-decoration: none;
 }
 
 .thought-content {
@@ -148,37 +150,61 @@ div.lazy {
     white-space: nowrap;
 }
 
-.thought-title::-webkit-details-marker {
-    display: none;
-}
-
-.thought-title::after {
+.thought-arrow {
     color: #8a9aa5;
-    content: "+";
-    float: right;
     font-size: 1.15em;
     font-weight: 400;
     margin-left: 1rem;
 }
 
-.thought-details[open] > .thought-title::after {
-    content: "−";
-}
-
 .thought-title:hover {
     color: #2f5874;
+    text-decoration: none;
 }
 
 .thought-static {
     color: #59636c;
 }
 
-.thought-body {
+.thought-article-body {
     color: #212529;
 }
 
-.thought-body table {
+.thought-article-body h2 {
+    margin-bottom: 1rem;
+    margin-top: 2.25rem;
+}
+
+.thought-article-body pre {
+    font-family: "Noto Sans Mono CJK SC", "Source Han Mono SC",
+        "Sarasa Mono SC", "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.85rem;
+    line-height: 1.45;
+    overflow-x: auto;
+    padding: 1.25rem;
+    white-space: pre;
+}
+
+.thought-article-body table {
+    border-collapse: collapse;
     display: block;
     max-width: 100%;
     overflow-x: auto;
+}
+
+.thought-article-body th,
+.thought-article-body td {
+    border: 1px solid #dee2e6;
+    padding: 0.65rem 0.75rem;
+    vertical-align: top;
+}
+
+.thought-article-body th {
+    background: #f5f7f8;
+    white-space: nowrap;
+}
+
+.thought-back {
+    color: #6c757d;
+    font-size: 0.9rem;
 }

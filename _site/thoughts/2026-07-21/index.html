@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <!-- Template: https://github.com/luost26/academic-homepage -->
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>用餐厅理解 Agent、Skill 与 Harness - Maolei Huang</title>
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+      integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css"
+      integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=Source+Code+Pro:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/global.css"
+    />
+  </head>
+  <body class="bg-light" >
+    <nav
+  class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top mb-5 shadow-sm"
+>
+  <div
+    class="container-lg"
+  >
+    <a class="navbar-brand"
+      ><strong>Maolei Huang</strong></a
+    >
+    <button
+      class="navbar-toggler"
+      style="font-size: 1em; padding: 0.5em"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-map"></i> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li
+          class="nav-item  "
+        >
+          <a class="nav-link" href="/"
+            >Home</a
+          >
+        </li>
+        
+        <li
+          class="nav-item  "
+        >
+          <a class="nav-link" href="/publications"
+            >Publications</a
+          >
+        </li>
+        
+        <li
+          class="nav-item active d-none admin-only"
+        >
+          <a class="nav-link" href="/thoughts"
+            >Thoughts</a
+          >
+        </li>
+        
+      </ul>
+      <li class="nav-item" style="list-style: none">
+        <a
+          class="nav-link"
+          href="javascript:void(0)"
+          id="lang-toggle"
+          onclick="toggleLang()"
+          >中文</a
+        >
+      </li>
+    </div>
+  </div>
+</nav>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("admin") === "1") {
+      localStorage.setItem("admin-mode", "1");
+      // Clean up URL without reload
+      var cleanUrl = window.location.pathname;
+      window.history.replaceState({}, "", cleanUrl);
+    }
+    if (localStorage.getItem("admin-mode") === "1") {
+      document.querySelectorAll(".admin-only").forEach(function (el) {
+        el.classList.remove("d-none");
+      });
+    }
+  })();
+</script>
+
+    <div
+      class="container-lg"
+    >
+      <article class="thought-article my-4 p-4 p-md-5 bg-white shadow-sm rounded-xl">
+  <header class="thought-article-header mb-4">
+    <a class="thought-back" href="/thoughts.html">
+      ← Thoughts
+    </a>
+    <h1 class="mt-3 mb-2">用餐厅理解 Agent、Skill 与 Harness</h1>
+    <div class="text-muted">
+      <i class="far fa-calendar-alt"></i>
+      2026-07-21
+    </div>
+  </header>
+  <div class="thought-article-body">
+    <p>下面从顾客进店点餐开始。方括号中的编号对应一个独立模块。</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[01 顾客进店] ──► [02 点餐 / User Prompt] ──► [03 Agent / 主厨接单]
+  “宫保鸡丁，不要花生；我对花生过敏”                          │
+                                                              ▼
+                                                     [04 观察当前状态]
+                                                              ▲
+[05 Context / 当前操作台] ─────────────────────────────────────┤
+  点菜单 · 食材 · 灶台状态 · 工具返回结果                      │
+                                                              │
+[06 Memory / 顾客与任务记忆] ──────────────────────────────────┤
+  过敏史 · 口味偏好 · 桌号 · 已完成工序                        │
+                                                              ▼
+[07 Skill / 菜谱与出餐规范] ──────────────────────────► [08 规划做法]
+  配方 · 顺序 · 火候 · 摆盘 · 过敏原处理
+
+
+                     ┌────────── Agent Harness / 执行与反馈循环 ──────────┐
+                     │                                                   │
+[04 观察] ──► [08 规划] ──► [09 动手制作] ──► [10 检查结果] ──► [11 完成？] │
+     ▲                                                       │           │
+     └───────────────────────── 否：调整后继续 ──────────────┘           │
+                                                             │ 是        │
+                     └─────────────────────────────────────────┼───────────┘
+                                                               ▼
+                                                      [12 装盘出餐]
+
+
+[09 动手制作] ──┬─► [13 本地 Tool / 刀具、炒锅、烤箱]
+                │
+                └─► [14 MCP / 标准连接协议] ──┬─► [15 Tool / 外部设备与工位]
+                                              └─► [16 Resource / 库存与食材信息]
+                                                               │
+工具与资源的返回结果 ───────────────────────────────────────────┴─► [05 Context]
+
+[17 RAG / 检索流程] ──► 检索 [16 Resource / 菜谱与安全规范] ──► [05 Context]
+
+
+[18 Guardrail / 食品安全红线] ───────────► 约束 [08 规划做法]
+  过敏原必须拦截 · 生熟分开 · 温度达标
+
+[19 Sandbox / 厨房权限隔离] ─────────────► 限制 [09 动手制作]
+  限制可使用的设备、区域和数据
+
+[20 Tracing / 后厨工单记录] ◄──────────── [10 检查结果]
+  记录判断、工具调用、执行结果和返工原因
+
+[21 Evals / 厨师考核] ───────────────────► 测试 [03 Agent + Harness]
+  用盲测、过敏原案例、出餐速度和成本考核
+
+
+[12 装盘出餐] ──► [22 Human in the loop / 店长或传菜员终检]
+                            ├─► 合格 ──► [23 上菜给顾客]
+                            └─► 不合格 ──► 返回 [04 观察当前状态]
+
+缺货、换菜或过敏原不确定 ──► [24 向顾客确认] ──► 更新 [02 点餐]
+</code></pre></div></div>
+
+<h2 id="核心概念">核心概念</h2>
+
+<blockquote>
+  <p>“官方定义”并非来自同一个标准组织。下面优先采用 OpenAI 官方文档；MCP、Tool 和 Resource 采用 MCP 官方规范。其余没有唯一标准的术语，使用主流工程定义并明确说明。</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>概念</th>
+      <th>餐厅类比</th>
+      <th>在点餐案例中的作用</th>
+      <th>技术定义（正式表述）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Model</td>
+      <td>厨师的大脑</td>
+      <td>理解订单、判断做法和处理异常</td>
+      <td>接收输入并生成输出的机器学习模型。在 Agent 系统中，模型通常负责推理、决策以及生成工具调用请求；它本身不等于完整的 Agent。</td>
+    </tr>
+    <tr>
+      <td>Agent</td>
+      <td>从接单到出餐的主厨</td>
+      <td>主动观察、规划、制作、检查并返工</td>
+      <td>以模型为核心、代表用户完成目标的系统。它能够管理任务执行过程，基于当前状态决定下一步，并通过工具采取行动，直到完成、失败或转交人工。</td>
+    </tr>
+    <tr>
+      <td>Agent Loop</td>
+      <td>反复查看订单、制作和试味</td>
+      <td>让主厨在菜品不合格时调整并继续制作</td>
+      <td>Harness 在用户、模型与工具之间反复协调的执行循环，典型过程为：准备上下文 → 调用模型 → 执行工具 → 返回结果 → 判断是否继续。<a href="https://openai.com/index/unrolling-the-codex-agent-loop/">OpenAI：Codex agent loop</a></td>
+    </tr>
+    <tr>
+      <td>Skill</td>
+      <td>菜谱与出餐规范</td>
+      <td>告诉主厨配方、工序、火候和摆盘标准</td>
+      <td>面向可重复工作流的可复用能力包，通常由 <code class="language-plaintext highlighter-rouge">SKILL.md</code> 加可选的脚本、参考资料和资源组成；系统先加载元数据，选中后再读取完整内容，实现渐进式披露。<a href="https://learn.chatgpt.com/docs/build-skills">OpenAI Codex：Skills</a></td>
+    </tr>
+    <tr>
+      <td>Tool</td>
+      <td>刀、锅、烤箱</td>
+      <td>执行切配、翻炒和烘烤等具体动作</td>
+      <td>具有明确名称、说明和输入结构的可调用操作，使模型能够查询数据、调用 API、修改文件或执行计算；模型请求调用，宿主程序负责真正执行。<a href="https://modelcontextprotocol.io/docs/learn/server-concepts#tools">MCP：Tools</a></td>
+    </tr>
+    <tr>
+      <td>MCP</td>
+      <td>厨房统一调度接口</td>
+      <td>让主厨用一致方式调用不同设备和工位</td>
+      <td>Model Context Protocol：连接 AI 应用与外部系统的开放标准，采用 Host–Client–Server 架构，服务器可暴露 Tools、Resources 和 Prompts。<a href="https://modelcontextprotocol.io/docs/getting-started/intro">MCP 官方简介</a></td>
+    </tr>
+    <tr>
+      <td>Resource</td>
+      <td>冰箱和食材仓库</td>
+      <td>为主厨提供食材、库存等可读取信息</td>
+      <td>MCP 中向 AI 应用提供上下文信息的数据源，可来自文件、API 或数据库；通常由应用读取并决定如何放入模型上下文。<a href="https://modelcontextprotocol.io/docs/learn/server-concepts#resources">MCP：Resources</a></td>
+    </tr>
+    <tr>
+      <td>Harness</td>
+      <td>整套餐厅运营系统</td>
+      <td>管理订单、循环、设备、权限、返工和交付</td>
+      <td>围绕 Agent Loop 的运行与编排基础设施，负责上下文组装、工具执行、状态持久化、内存、权限、沙箱、重试和终止条件等。该词是工程概念，不是单一协议标准。<a href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/">OpenAI：Agents SDK Harness</a></td>
+    </tr>
+    <tr>
+      <td>Context</td>
+      <td>当前操作台</td>
+      <td>放着这次订单、食材状态和工位返回结果</td>
+      <td>某次模型调用实际可见的信息集合，例如系统指令、用户输入、对话历史、检索内容、Skill 指令和工具返回值。它受上下文窗口容量限制。</td>
+    </tr>
+    <tr>
+      <td>Memory</td>
+      <td>顾客档案与工单记忆</td>
+      <td>记住过敏史、口味、桌号和制作进度</td>
+      <td>在当前步骤之外保存并在需要时恢复的信息，用来把先前工作中的有用上下文带到后续步骤或会话。实现可以是线程状态、摘要、文件或数据库记录。</td>
+    </tr>
+    <tr>
+      <td>RAG</td>
+      <td>临时查菜谱库</td>
+      <td>按需检索具体做法和食品安全要求</td>
+      <td>Retrieval-Augmented Generation：生成前从外部知识源检索相关内容，并将检索结果加入模型输入，使回答基于可更新、可追溯的外部信息。它是一种架构模式，不是独立 Agent。</td>
+    </tr>
+    <tr>
+      <td>Guardrail</td>
+      <td>食品安全红线</td>
+      <td>阻止过敏原污染和其他危险操作</td>
+      <td>对 Agent 的输入、输出或工具调用执行的验证与约束，用于检测或阻止不安全、越权、不合规或不满足业务规则的行为。Guardrail 可以由规则、代码或模型实现。</td>
+    </tr>
+    <tr>
+      <td>Sandbox</td>
+      <td>厨房权限隔离</td>
+      <td>限制不同角色能接触的设备与操作</td>
+      <td>受控的隔离执行环境，通过操作系统或运行平台限制 Agent 能访问的文件、网络、命令和资源；它控制“技术上能做什么”，而审批策略控制“何时必须先问人”。<a href="https://learn.chatgpt.com/docs/agent-approvals-security">OpenAI Codex：Sandbox 与审批</a></td>
+    </tr>
+    <tr>
+      <td>Tracing</td>
+      <td>后厨工单记录</td>
+      <td>记录接单、用料、工序、检查和返工过程</td>
+      <td>对一次 Agent 运行中的模型调用、工具调用、交接、Guardrail 和其他事件进行结构化记录，用于调试、监控、性能分析和审计。</td>
+    </tr>
+    <tr>
+      <td>Evals</td>
+      <td>厨师考试与抽检</td>
+      <td>测试味道、安全、速度和异常处理能力</td>
+      <td>使用明确的数据集、任务、评分标准和指标，对模型或 Agent 的正确性、可靠性、安全性、成本与延迟进行可重复测量。Evals 是测试方法，不是运行时模块。</td>
+    </tr>
+    <tr>
+      <td>Human in the loop</td>
+      <td>店长、传菜员或顾客确认</td>
+      <td>在换菜、过敏原和最终出餐等关键节点把关</td>
+      <td>在自动执行流程中保留人工监督、判断或授权节点；当操作高风险、不可逆、信息不足或需要责任确认时，Agent 暂停并请求人类决定。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="最小记忆版本">最小记忆版本</h2>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Model   = 厨师的大脑
+Agent   = 从接单一直做到出餐的主厨
+Skill   = 菜谱和出餐规范
+Tool    = 刀、锅、烤箱等厨房工具
+MCP     = 主厨连接设备和工位的统一接口
+Harness = 包含订单、厨房、权限、反馈和质检的整套餐厅系统
+</code></pre></div></div>
+
+<p>Agent 的核心工作循环：</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>看订单和厨房状态 → 规划做法 → 动手制作 → 检查味道 → 不合格则调整
+</code></pre></div></div>
+
+  </div>
+</article>
+
+    </div>
+    <footer class="footer border-top py-2 mt-5 bg-white small">
+    <div class="container-lg">
+        <div class="row my-3">
+            <div class="col-6">
+                <div class="text-muted">
+                    <i>Last updated: Jul 2026</i>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="text-right text-muted">
+                    <a href="https://github.com/luost26/academic-homepage" target="_blank"><i class="fas fa-pencil-ruler"></i> academic-homepage</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+      integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js"
+      integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+      integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/bubble_visual_hash.js"></script>
+    <script src="/assets/js/semantic_scholar_citation_count.js"></script>
+    <script>
+      function toggleLang() {
+        var current = localStorage.getItem("lang") || "en";
+        var next = current === "en" ? "zh" : "en";
+        localStorage.setItem("lang", next);
+        applyLang(next);
+      }
+      function applyLang(lang) {
+        document.querySelectorAll("[data-lang-en]").forEach(function (el) {
+          el.style.display = lang === "en" ? "" : "none";
+        });
+        document.querySelectorAll("[data-lang-zh]").forEach(function (el) {
+          el.style.display = lang === "zh" ? "" : "none";
+        });
+        var btn = document.getElementById("lang-toggle");
+        if (btn) btn.textContent = lang === "en" ? "中文" : "EN";
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        applyLang(localStorage.getItem("lang") || "en");
+      });
+    </script>
+  </body>
+</html>

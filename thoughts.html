@@ -14,11 +14,11 @@ navbar_title: Thoughts
       <div class="p-3 {% unless forloop.last %}border-bottom{% endunless %}">
         <div class="d-flex align-items-start">
           <div class="thought-content flex-grow-1 min-width-0">
-            {% if item.expandable %}
-            <details class="thought-details">
-              <summary class="thought-title">{{ item.title }}</summary>
-              <div class="thought-body pt-3">{{ item.content }}</div>
-            </details>
+            {% if item.layout == "thought" %}
+            <a class="thought-title" href="{{ item.url | relative_url }}">
+              {{ item.title }}
+              <span class="thought-arrow" aria-hidden="true">→</span>
+            </a>
             {% else %}
             <div class="thought-static">{{ item.content }}</div>
             {% endif %}
