@@ -18,8 +18,7 @@ authors:
   - Shuhan Song*
   - Huawei Cao
 links:
-  Paper:
-  Program: https://sigir2026.org/SIGIR2026_program.pdf
+  Paper: https://sigir2026.org/SIGIR2026_program.pdf
   Code:
   Poster: /assets/files/posters/PCANet.pdf
 ---
