@@ -27,6 +27,63 @@ SkyDistill 的核心想法是：
 
 训练完成后，教师模型和辅助模块都会被移除，线上只保留轻量的学生模型，因此不会明显增加服务负担。
 
+**背后的理论与公式**
+
+设教师和学生对候选航班的输出分别为 \(z^T\) 和 \(z^S\)，温度为 \(\tau\)。学生一方面学习真实标签，另一方面学习教师提供的软概率：
+
+$$
+\mathcal{L}_{\text{soft}}
+=\tau^2\operatorname{KL}\!\left(
+\operatorname{softmax}(z^T/\tau)\,\|\,
+\operatorname{softmax}(z^S/\tau)
+\right)
+$$
+
+当 \(\tau>1\) 时，概率分布会变得更加平滑。原本接近 0 的候选也会显露出相对差异，因此学生学到的不只是最终标签，还包括候选之间的细微相似性。
+
+中间表示通过投影层对齐：
+
+$$
+\mathcal{L}_{\text{hint}}=\left\|P h^S-h^T\right\|_2^2
+$$
+
+最小化这个距离，会迫使学生在自己的表示空间中重建教师的高层特征关系。投影矩阵 \(P\) 只在训练阶段使用，因此不会增加上线后的推理成本。
+
+教师的可信程度由预测熵衡量：
+
+$$
+H(p^T)=-\sum_j p_j^T\log p_j^T,
+\qquad
+\alpha=\alpha_0\exp\left(-\gamma\frac{H(p^T)}{H_{\max}}\right)
+$$
+
+对熵求导可得：
+
+$$
+\frac{\partial\alpha}{\partial H}
+=-\frac{\gamma}{H_{\max}}\alpha<0
+$$
+
+因此，教师越犹豫、预测熵越高，蒸馏权重就越小；教师越确定，学生越多参考教师。这从公式上保证了“有把握时多听，没把握时少听”。
+
+为了学习候选间的先后顺序，模型还使用成对排序损失：
+
+$$
+\mathcal{L}_{\text{pair}}
+=\sum_{(i,j)}\operatorname{BCE}\!\left(
+\sigma(z_i^S-z_j^S),\sigma(z_i^T-z_j^T)
+\right)
+$$
+
+如果教师认为航班 \(i\) 优于 \(j\)，那么 \(z_i^T-z_j^T>0\)，学生只有保持相同的分数方向才能减小损失。最终目标综合真实标签、特征表示和相对顺序：
+
+$$
+\mathcal{L}=\mathcal{L}_{\text{base}}
++\lambda_1\alpha\mathcal{L}_{\text{soft}}
++\lambda_2\mathcal{L}_{\text{hint}}
++\lambda_3\mathcal{L}_{\text{pair}}
+$$
+
 **一句话类比**
 
 SkyDistill 像让一位经验丰富的旅行顾问培训新人：
