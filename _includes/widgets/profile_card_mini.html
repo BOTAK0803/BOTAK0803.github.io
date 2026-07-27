@@ -22,14 +22,16 @@
                 </div>
                 <div class="row">
                     <div class="col text-center h4">
-                        {{ site.data.profile.primary_name }}
+                        <span data-lang-en>{{ site.data.profile.primary_name }}</span
+                        ><span data-lang-zh style="display: none">{{ site.data.profile.primary_name_zh | default: site.data.profile.primary_name }}</span>
                     </div>
                 </div>
 
                 <div class="row small">
                     <div class="col text-center">
                         {% for position in site.data.profile.positions %}
-                        {{ position.name }}<br/>
+                        <span data-lang-en>{{ position.name }}</span
+                        ><span data-lang-zh style="display: none">{{ position.name_zh | default: position.name }}</span><br/>
                         {% endfor %}
                     </div>
                 </div>
@@ -37,14 +39,14 @@
                 <div class="row pt-2">
                     <div class="col h4 profile-social-links">
                         {% if site.data.profile.email %}
-                        <a class="px-1 no-break" href="mailto:{{ site.data.profile.email | encode_email }}" data-toggle="tooltip" data-placement="top" title="Email" aria-label="Email">
+                        <a class="px-1 no-break" href="mailto:{{ site.data.profile.email | encode_email }}" data-toggle="tooltip" data-placement="top" title="Email" aria-label="Email" data-title-en="Email" data-title-zh="邮箱">
                             <i class="fas fa-envelope"></i>
                         </a>
                         {% endif %}
 
                         {% if site.data.profile.phone %}
                         {% assign phone_href = site.data.profile.phone | remove: ' ' | remove: '(' | remove: ')' | remove: '-' %}
-                        <a class="px-1 no-break" href="tel:{{ phone_href }}" data-toggle="tooltip" data-placement="top" title="Phone: {{ site.data.profile.phone }}" aria-label="Phone: {{ site.data.profile.phone }}">
+                        <a class="px-1 no-break" href="tel:{{ phone_href }}" data-toggle="tooltip" data-placement="top" title="Phone: {{ site.data.profile.phone }}" aria-label="Phone: {{ site.data.profile.phone }}" data-title-en="Phone: {{ site.data.profile.phone }}" data-title-zh="电话：{{ site.data.profile.phone }}">
                             <i class="fas fa-phone"></i>
                         </a>
                         {% endif %}
@@ -55,26 +57,26 @@
                         {%- else -%}
                         {%- assign gscholar_url = 'https://scholar.google.com/citations?user=' | append: site.data.profile.gscholar -%}
                         {%- endif -%}
-                        <a class="px-1 no-break" target="_blank" href="{{ gscholar_url }}" data-toggle="tooltip" data-placement="top" title="Google Scholar" aria-label="Google Scholar">
+                        <a class="px-1 no-break" target="_blank" href="{{ gscholar_url }}" data-toggle="tooltip" data-placement="top" title="Google Scholar" aria-label="Google Scholar" data-title-en="Google Scholar" data-title-zh="谷歌学术">
                             <i class="fab fa-google-scholar"></i>
                         </a>
                         {% endif %}
                         
                         {% if site.data.profile.github %}
-                        <a class="px-1 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+                        <a class="px-1 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub" data-title-en="GitHub" data-title-zh="GitHub">
                             <i class="fab fa-github"></i>
                         </a>
                         {% endif %}
 
                         {% if site.data.profile.cv_link %}
-                        <a class="px-1 no-break" target="_blank" rel="noopener noreferrer" href="{{ site.data.profile.cv_link | relative_url }}" data-toggle="tooltip" data-placement="top" title="Curriculum Vitae" aria-label="Curriculum Vitae">
+                        <a class="px-1 no-break" target="_blank" rel="noopener noreferrer" href="{{ site.data.profile.cv_link | relative_url }}" data-toggle="tooltip" data-placement="top" title="Curriculum Vitae" aria-label="Curriculum Vitae" data-title-en="Curriculum Vitae" data-title-zh="个人简历">
                             <i class="fas fa-file-pdf"></i>
                         </a>
                         {% endif %}
 
                         {% if site.data.profile.wechat_qrcode %}
-                        <span data-toggle="tooltip" data-placement="top" title="WeChat">
-                            <a class="px-1 no-break" data-toggle="modal" data-target="#modal-wechat" aria-label="WeChat">
+                        <span data-toggle="tooltip" data-placement="top" title="WeChat" data-title-en="WeChat" data-title-zh="微信">
+                            <a class="px-1 no-break" data-toggle="modal" data-target="#modal-wechat" aria-label="WeChat" data-title-en="WeChat" data-title-zh="微信">
                                 <i class="fab fa-weixin"></i>
                             </a>
                         </span>
@@ -93,7 +95,7 @@
                         {% endif %}
 
                         {% if site.data.profile.orcid %}
-                        <a class="px-1 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}" data-toggle="tooltip" data-placement="top" title="ORCID" aria-label="ORCID">
+                        <a class="px-1 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}" data-toggle="tooltip" data-placement="top" title="ORCID" aria-label="ORCID" data-title-en="ORCID" data-title-zh="ORCID">
                             <i class="fab fa-orcid"></i>
                         </a>
                         {% endif %}
@@ -119,7 +121,9 @@
             </div>
             {% endif %}
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">
+                    <span data-lang-en>Close</span><span data-lang-zh style="display: none">关闭</span>
+                </button>
             </div>
         </div>
     </div>
