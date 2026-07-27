@@ -361,6 +361,8 @@ Harness = 包含订单、厨房、权限、反馈和质检的整套餐厅系统
       document.addEventListener("DOMContentLoaded", function () {
         renderMathInElement(document.body, {
           delimiters: [
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false },
             { left: "$$", right: "$$", display: true },
             { left: "$", right: "$", display: false },
           ],

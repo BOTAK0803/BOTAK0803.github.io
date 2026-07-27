@@ -231,6 +231,8 @@ h_{\text{now}}=\sum_{t=1}^{T}\alpha_t h_t\]
       document.addEventListener("DOMContentLoaded", function () {
         renderMathInElement(document.body, {
           delimiters: [
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false },
             { left: "$$", right: "$$", display: true },
             { left: "$", right: "$", display: false },
           ],

@@ -242,6 +242,8 @@ h_{\text{sens}}=\sum_t\alpha_t e_t\]
       document.addEventListener("DOMContentLoaded", function () {
         renderMathInElement(document.body, {
           delimiters: [
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false },
             { left: "$$", right: "$$", display: true },
             { left: "$", right: "$", display: false },
           ],
