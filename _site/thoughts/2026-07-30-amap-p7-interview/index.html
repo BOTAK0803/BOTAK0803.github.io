@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>高德 P7 二面问题准备 - Maolei Huang</title>
+
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+      integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css"
+      integrity="sha512-b1ASx0WHgVFL5ZQhTgiPWX+68KjS38Jk87jg7pe+qC7q9YkEtFq0z7xCglv7qGIs/68d3mAp+StfC8WKC5SSAg=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/css/global.css?v=20260721-5"
+    />
+  </head>
+  <body class="bg-light" >
+    <nav
+  class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top mb-5 shadow-sm"
+>
+  <div
+    class="container-lg"
+  >
+    <a class="navbar-brand"
+      ><strong>Maolei Huang</strong></a
+    >
+    <button
+      class="navbar-toggler"
+      style="font-size: 1em; padding: 0.5em"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-map"></i> Menu
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li
+          class="nav-item  "
+        >
+          <a class="nav-link" href="/"
+            >Home</a
+          >
+        </li>
+        
+        <li
+          class="nav-item  "
+        >
+          <a class="nav-link" href="/publications"
+            >Publications</a
+          >
+        </li>
+        
+        <li
+          class="nav-item active d-none admin-only"
+        >
+          <a class="nav-link" href="/thoughts"
+            >Thoughts</a
+          >
+        </li>
+        
+      </ul>
+      <li class="nav-item" style="list-style: none">
+        <a
+          class="nav-link"
+          href="javascript:void(0)"
+          id="lang-toggle"
+          onclick="toggleLang()"
+          >中文</a
+        >
+      </li>
+    </div>
+  </div>
+</nav>
+<script>
+  (function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("admin") === "1") {
+      localStorage.setItem("admin-mode", "1");
+      // Clean up URL without reload
+      var cleanUrl = window.location.pathname;
+      window.history.replaceState({}, "", cleanUrl);
+    }
+    if (localStorage.getItem("admin-mode") === "1") {
+      document.querySelectorAll(".admin-only").forEach(function (el) {
+        el.classList.remove("d-none");
+      });
+    }
+  })();
+</script>
+
+    <div
+      class="container-lg"
+    >
+      <article class="thought-article my-4 p-4 p-md-5 bg-white shadow-sm rounded-xl">
+  <header class="thought-article-header mb-4">
+    <a class="thought-back" href="/thoughts.html">
+      ← Thoughts
+    </a>
+    <h1 class="mt-3 mb-2">高德 P7 二面问题准备</h1>
+    <div class="text-muted">
+      <i class="far fa-calendar-alt"></i>
+      2026-07-30
+    </div>
+  </header>
+  <div class="thought-article-body">
+    <p>这轮面试由 P9 面试官进行，重点大概率不是考察某个孤立的算法知识点，而是判断候选人是否达到 P7 的要求：能否独立定义问题、做出关键技术决策、推动复杂项目落地，并对最终结果负责。</p>
+
+<p>结合岗位描述和个人经历，需要重点准备大模型后训练、智能体架构、交通场景迁移、评估体系以及项目主导能力。简历中比较容易被挑战的部分包括：直接从事大模型的年限、强化学习的实际深度、智能体是否真正落地，以及推荐经验如何迁移到交通预测。</p>
+
+<p><strong>1. 为什么适合这个岗位？</strong></p>
+
+<p>过去负责的交通搜索推荐，本质上也是在复杂、动态和多约束的交通环境中理解用户需求并进行决策。近一年进一步完成了大模型排序从数据构造、监督微调、强化学习到部署评测的完整链路，同时探索了旅行规划智能体。</p>
+
+<p>虽然具体业务将从出行商品排序转向交通理解与预测，但用户意图、时空信息、复杂约束、模型评测和线上稳定性等核心问题是相通的。已有经验能够迁移，同时也需要进一步补充交通预测和时空建模知识。</p>
+
+<p><strong>2. 只有近一年的大模型经验，为什么能够胜任？</strong></p>
+
+<p>如果只计算直接的大模型项目，相关经历确实主要集中在近一年。但此前四年已经积累了大规模模型训练、用户行为建模、多目标优化、在线部署和实验评估经验，大模型对我而言是模型范式的升级，而不是完全从零开始。</p>
+
+<p>近一年已经跑通数据构造、监督微调、强化学习、评测和部署链路，也能够将传统排序经验迁移到生成式排序和智能体中。回答时不能只强调学习能力，而应通过已经完成的项目证明迁移能力。</p>
+
+<p><strong>3. 大模型排序项目中，个人具体负责了什么？</strong></p>
+
+<p>需要按照完整链路回答：传统排序存在哪些不足、为什么选择生成式排序、训练数据和真实标签如何构造、监督微调与强化学习分别解决什么问题、奖励函数如何设计、核心指标从 80% 到 86.2% 分别来自哪些改动，以及为什么最终没有直接上线更大的模型。</p>
+
+<p>同时要明确哪些方案由自己提出，哪些代码和实验由自己完成，哪些部分由其他同学协作完成。P9 会重点区分个人贡献与团队成果。</p>
+
+<p><strong>4. 为什么要用大模型排序，传统模型真的解决不了吗？</strong></p>
+
+<p>传统排序模型擅长结构化特征和高并发在线预测，但旅游查询经常包含模糊意图和多重约束，例如预算、目的地、时间、同行人和行程偏好。大模型的价值，是将用户、查询和候选商品放在统一语义空间中进行比较和推理。</p>
+
+<p>大模型不应该直接替换整个传统排序链路。更合理的方案是让传统模型负责召回和初排，大模型负责复杂意图理解、相关性判断和有限候选重排，在效果、延迟和成本之间取得平衡。</p>
+
+<p><strong>5. 监督微调数据是如何构造的？</strong></p>
+
+<p>需要准备一个完整样本，能够现场讲清输入、输出、候选集合和训练标签。面试官可能继续追问：如何选择正负样本，点击与支付标签冲突时如何处理，候选位置是否造成偏差，如何减少曝光偏差，为什么扩大数据规模后有效，以及训练集和评测集如何避免用户或查询泄漏。</p>
+
+<p>还需要明确真实日志、人工数据和模型生成数据的占比，以及低质量样本的清洗方法。</p>
+
+<p><strong>6. 为什么选择 GRPO，奖励函数如何设计？</strong></p>
+
+<p>这是判断大模型后训练深度的核心问题。需要说明为什么选择 GRPO 而不是 PPO 或直接偏好优化，以及分组采样、优势估计和奖励归一化的具体方式。</p>
+
+<p>奖励设计方面，需要讲清排序指标与支付指标如何组合，多目标权重如何确定，怎样防止奖励投机和模式坍缩，是否使用 KL 约束，以及强化学习相对于监督微调带来了多少增益。最好准备一组真实失败实验，说明问题如何被发现和修复。</p>
+
+<p><strong>7. 结构化思维链为什么能提升排序效果？</strong></p>
+
+<p>需要说明思维链包含哪些字段，是自由文本还是固定结构，以及训练和推理阶段是否都保留。一个合理的结构可以是：先解析用户意图，再提取候选属性，之后进行约束匹配和候选比较，最后输出排序结果。</p>
+
+<p>还要回答如何证明收益来自推理能力而不是输出长度增加，怎样降低幻觉，以及上线时如何控制额外推理成本。</p>
+
+<p><strong>8. 更大模型效果更好，为什么最终仍选择小模型？</strong></p>
+
+<p>大模型的核心指标约为 87%，小模型约为 86.2%，但大模型单次推理耗时超过 100 毫秒，会显著增加在线重排的延迟和资源成本。综合效果、吞吐量和稳定性，当前选择小模型更加合理。</p>
+
+<p>后续重点不是直接上线大模型，而是将大模型中验证有效的软标签、结构化思维链和排序能力蒸馏到小模型中。这道题可以体现工业场景中的技术取舍能力。</p>
+
+<p><strong>9. 旅行规划智能体具体做到了什么程度？</strong></p>
+
+<p>需要准备一个完整用户案例，说明智能体有哪些工具，如何进行意图路由和任务分解，如何完成多源召回、跨品类组合和约束冲突处理，以及价格和库存变化时如何重新规划。</p>
+
+<p>还需要说明是否有记忆机制、如何防止无限循环、哪些步骤需要人工确认、是否真正连接预订链路，以及当前的评测结果。回答时必须准确区分原型、离线验证、灰度测试和正式上线，避免扩大项目成熟度。</p>
+
+<p><strong>10. 如果设计一个交通智能体，会如何实现？</strong></p>
+
+<p>例如用户提出：“帮我规划明早从望京到首都机场的路线，避开拥堵，不能迟到。”可以从六层展开：意图与约束解析；地图、路况、天气和事件工具调用；候选路线生成；时间、风险和偏好的多目标比较；执行过程中的动态重规划；离线评测、线上指标和安全兜底。</p>
+
+<p>P7 的回答不能只描述智能体框架，还需要考虑数据时效性、工具失败恢复、权限、延迟、成本和确定性。</p>
+
+<p><strong>11. 如何建立智能体评估体系？</strong></p>
+
+<p>评估可以分为四层：单模块评估关注意图解析、工具参数和事实准确率；任务级评估关注任务完成率、约束满足率和规划质量；系统级评估关注时延、成本、稳定性和工具失败恢复率；业务级评估关注用户采纳率、到达时间准确性、投诉率和长期留存。</p>
+
+<p>评测数据可以来自历史真实请求、专家构造的复杂案例、对抗与边界案例、线上失败样本回流，以及经过人工审核的模型生成样本。</p>
+
+<p><strong>12. 如何将大模型用于交通预测和时空序列建模？</strong></p>
+
+<p>不能默认语言模型可以直接替代成熟的时空预测模型。更合理的方向是利用大模型融合事件、天气、施工和文本等非结构化信息，辅助任务定义、数据构造、异常解释和模型选择；核心数值预测仍可以由专门的时空模型承担。</p>
+
+<p>需要进一步思考如何表示路网、时间和空间关系，语言模型与时空图模型如何协作，以及如何避免模型生成看似合理但数值错误的结果。</p>
+
+<p><strong>13. LSTP 与高德交通场景有什么关系？</strong></p>
+
+<p>LSTP 可以作为连接既有经验与新岗位的切入点：长决策周期可以对应出行规划和长期路线偏好；行为稀疏可以对应低频路线和冷启动用户；强时序性可以对应早晚高峰、临时拥堵和突发事件；周期性可以对应工作日、周末、节假日和季节变化。</p>
+
+<p>但 LSTP 不能原样搬到交通预测，需要重新定义时间粒度、空间关系和预测目标。主动说明迁移边界，比简单宣称可以复用更成熟。</p>
+
+<p><strong>14. 讲一个失败项目或错误技术判断。</strong></p>
+
+<p>失败案例需要包含：当时为什么做出这个判断、结果为什么没有达到预期、如何发现问题、自己承担了什么责任、后来如何调整，以及最终形成了什么方法论。</p>
+
+<p>不要选择无关痛痒的失败，也不要把原因完全归结于产品、工程或数据团队。P9 更关注候选人是否能够识别自己的判断错误并完成纠偏。</p>
+
+<p><strong>15. 为什么认为自己具备 P7 的能力？</strong></p>
+
+<p>回答时不需要直接强调职级，而应使用事实证明：不仅负责单个模型，也承担了交通推荐体系的问题定义、技术路线、多业务能力统一、线上实验和长期演进；通过 LSTP 进行场景抽象，推动不同业务共享算法能力，并将实际问题沉淀为论文、专利和可复用框架；近一年又跑通了大模型排序的训练和部署链路。</p>
+
+<p>核心价值不只是完成需求，而是能够定义方向、做关键取舍并推动结果落地。</p>
+
+<p><strong>需要重点防守的四个问题</strong></p>
+
+<p>第一是大模型经验年限。不回避直接经验不足三年的事实，重点说明传统推荐积累如何迁移，以及近一年已经做到了什么深度。</p>
+
+<p>第二是智能体成熟度。准确区分原型、离线验证、灰度和正式上线，避免把探索项目包装成成熟系统。</p>
+
+<p>第三是强化学习深度。必须讲清数据、采样、奖励、训练稳定性、指标贡献和失败实验，不能只说使用了 GRPO。</p>
+
+<p>第四是交通预测经验。不假装已经精通，而是展现清晰的迁移框架、合理的技术边界，以及快速补齐时空建模的能力。</p>
+
+<p><strong>可能的面试流程</strong></p>
+
+<p>这轮面试可能包括：五分钟自我介绍；二十到三十分钟深挖大模型排序或智能体；十五分钟开放系统设计；十分钟讨论 P7 职责、失败案例和求职动机；最后是反问环节。</p>
+
+<p>与其准备大量浅层答案，更重要的是准备三条可以连续追问二十分钟的项目主线：大模型排序的数据、监督微调、强化学习、部署与评测；旅行规划智能体的需求、架构、工具、评测与真实成熟度；交通推荐体系的场景抽象、统一框架、关键取舍与业务收益。</p>
+
+<p>其中最值得优先准备的是大模型排序。它同时覆盖岗位要求中的后训练、强化学习、评估体系和工程落地，也是面试官最容易判断真实技术深度的项目。</p>
+
+  </div>
+</article>
+
+    </div>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+      integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/github-buttons/2.14.2/buttons.min.js"
+      integrity="sha512-OYwZx04hKFeFNYrWxIyo3atgGpb+cxU0ENWBZs72X7T9U+NoHPM1ftUn/Mfw7dRDXrqWA6M1wBg6z6fGE32aeA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+      integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+          delimiters: [
+            { left: "\\[", right: "\\]", display: true },
+            { left: "\\(", right: "\\)", display: false },
+            { left: "$$", right: "$$", display: true },
+            { left: "$", right: "$", display: false },
+          ],
+          throwOnError: false,
+        });
+      });
+    </script>
+    <script src="/assets/js/common.js"></script>
+    <script src="/assets/js/bubble_visual_hash.js"></script>
+    <script src="/assets/js/semantic_scholar_citation_count.js"></script>
+    <script>
+      function toggleLang() {
+        var current = localStorage.getItem("lang") || "en";
+        var next = current === "en" ? "zh" : "en";
+        localStorage.setItem("lang", next);
+        applyLang(next);
+      }
+      function applyLang(lang) {
+        document.querySelectorAll("[data-lang-en]").forEach(function (el) {
+          el.style.display = lang === "en" ? "" : "none";
+        });
+        document.querySelectorAll("[data-lang-zh]").forEach(function (el) {
+          el.style.display = lang === "zh" ? "" : "none";
+        });
+        document.querySelectorAll("[data-title-en][data-title-zh]").forEach(function (el) {
+          var localizedTitle = el.getAttribute("data-title-" + lang);
+          el.setAttribute("title", localizedTitle);
+          el.setAttribute("aria-label", localizedTitle);
+          el.setAttribute("data-original-title", localizedTitle);
+        });
+        var btn = document.getElementById("lang-toggle");
+        if (btn) btn.textContent = lang === "en" ? "中文" : "EN";
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        applyLang(localStorage.getItem("lang") || "en");
+      });
+    </script>
+  </body>
+</html>
