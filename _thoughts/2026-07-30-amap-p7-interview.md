@@ -1,5 +1,5 @@
 ---
-title: "高德 P7 二面问题准备"
+title: "交通大模型与智能体：技术问题与实践思考"
 date: 2026-07-30
 layout: thought
 navbar_title: Thoughts
