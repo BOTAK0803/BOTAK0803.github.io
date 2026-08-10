@@ -17,16 +17,18 @@ include.limit | group_by_exp: "item", "item.date | date: '%Y'" -%}
         {% for item in year.items %}
         <div class="news-item my-1 d-flex">
           <div>
-            {% if item.external_url %}<a
-              href="{{ item.external_url }}"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{% endif %}
             <span data-lang-en>{{ item.title }}</span
             ><span data-lang-zh style="display: none"
               >{{ item.title_zh | default: item.title }}</span
             >
-            {% if item.external_url %}</a>{% endif %}
+            {% if item.external_url %}<a
+              class="ml-1"
+              href="{{ item.external_url }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open external link"
+              ><i class="fas fa-external-link-alt"></i></a
+            >{% endif %}
           </div>
           <div class="ml-auto mt-auto text-muted no-break">
             <i>{{ item.date | date: "%b %d" }}</i>
