@@ -73,6 +73,26 @@
                       >
                     </div>
                     <div class="small">{{ item.dept }}</div>
+                    {% if item.roles %}
+                    {% for role in item.roles %}
+                    <div class="small d-flex">
+                      <div>
+                        <span data-lang-en>{{ role.position }}</span
+                        ><span data-lang-zh style="display: none"
+                          >{{ role.position_zh | default: role.position }}</span
+                        >
+                      </div>
+                      <div class="mt-auto ml-auto no-break">
+                        <em
+                          ><span data-lang-en>{{ role.date }}</span
+                          ><span data-lang-zh style="display: none"
+                            >{{ role.date_zh | default: role.date }}</span
+                          ></em
+                        >
+                      </div>
+                    </div>
+                    {% endfor %}
+                    {% else %}
                     <div class="small d-flex">
                       <div>
                         <span data-lang-en>{{ item.position }}</span
@@ -89,6 +109,7 @@
                         >
                       </div>
                     </div>
+                    {% endif %}
                   </div>
                 </li>
                 {% endfor %}
