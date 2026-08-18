@@ -1,9 +1,9 @@
 ---
-title: "FSLNet: Episodic Few-Shot Adaptation for Industrial Recommender Systems"
-date: 2026-08-07 20:00:00 +0800
+title: "SkyDistill: Navigating Fuzzy Flight Search Ranking via Precise Intent Distillation"
+date: 2026-04-01 00:01:00 +0800
 selected: true
-pub: "The IEEE International Conference on Data Mining (ICDM) "
-pub_zh: "第26届 ACM ICDM 国际数据挖掘会议"
+pub: "Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
+pub_zh: "第49届 ACM SIGIR 信息检索研究与发展国际会议"
 pub_last: ' <span class="badge badge-pill badge-publication badge-success">Poster</span>'
 pub_date: "2026"
 # semantic_scholar_id: 11ac0b5634a282f1a0da204b98e7473d8b480dfb  # use this to retrieve citation count
@@ -12,15 +12,13 @@ pub_date: "2026"
 #   The tangerine is a type of citrus fruit that is orange in color, that is considered either a variety of Citrus reticulata, the mandarin orange, or a closely related species, under the name Citrus tangerina, or yet as a hybrid (Citrus × tangerina) of mandarin orange varieties, with some pomelo contribution.
 #   According to the Oxford English Dictionary (OED), the word "tangerine" was originally an adjective meaning "Of or pertaining to, or native of Tangier, a seaport in Morocco, on the Strait of Gibraltar" and "a native of Tangier." The name was first used for fruit coming from Tangier, Morocco, described as a mandarin variety. The OED cites this usage from Addison's The Tatler in 1710 with similar uses from the 1800s. The adjective was applied to the fruit, once known scientifically as "Citrus nobilis var. tangeriana" which grew in the region of Tangiers. This usage appears in the 1800s.
 
-cover: /assets/images/covers/FSLNet.png
+cover: /assets/images/covers/SkyDistill.png
 authors:
   - Maolei Huang
   - Shuhan Song*
-  - Ming Dun
-  - Zhenlong Yuan
   - Huawei Cao
 links:
   Paper: https://sigir2026.org/SIGIR2026_program.pdf
   Code:
-  Poster: /assets/files/posters/PCANet.pdf
+  Poster: /assets/files/posters/SkyDistill.pdf
 ---
