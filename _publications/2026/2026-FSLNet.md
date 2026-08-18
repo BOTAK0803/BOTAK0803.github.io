@@ -1,9 +1,9 @@
 ---
-title: "SkyDistill: Navigating Fuzzy Flight Search Ranking via Precise Intent Distillation"
-date: 2026-04-01 00:01:00 +0800
+title: "FSLNet: Episodic Few-Shot Adaptation for Industrial Recommender Systems"
+date: 2026-08-07 20:00:00 +0800
 selected: true
-pub: "Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR)"
-pub_zh: "第49届 ACM SIGIR 信息检索研究与发展国际会议"
+pub: "The IEEE International Conference on Data Mining (ICDM) "
+pub_zh: "第26届 ACM ICDM 国际数据挖掘会议"
 pub_last: ' <span class="badge badge-pill badge-publication badge-success">Poster</span>'
 pub_date: "2026"
 # semantic_scholar_id: 11ac0b5634a282f1a0da204b98e7473d8b480dfb  # use this to retrieve citation count
@@ -16,6 +16,8 @@ cover: /assets/images/covers/FSLNet.png
 authors:
   - Maolei Huang
   - Shuhan Song*
+  - Ming Dun
+  - Zhenlong Yuan
   - Huawei Cao
 links:
   Paper: https://sigir2026.org/SIGIR2026_program.pdf
